@@ -42,7 +42,7 @@
         <div class="hero-main">
           <h1>Contract Manufacturing Organizations (CMO/CDMO) Directory</h1>
 
-          <p class="muted hero-subtitle">
+          <p class="muted hero-subtitle text-limit">
             Find and compare CDMO companies providing pharmaceutical contract manufacturing services across drug substance and drug product.
             Use filters to shortlist by capability, quality credentials, production scale, and region. Then contact providers directly to start a sourcing conversation.
           </p>
@@ -65,7 +65,7 @@
             </a>
           </div>
 
-          <p class="muted hero-trust">
+          <p class="muted hero-trust text-limit">
             Supplier profiles include publicly available information and direct submissions; credentials are shown where provided and available.
           </p>
         </div>
@@ -94,7 +94,7 @@
     <!-- CATEGORIES -->
     <section id="categories" class="card section-pad">
       <h2>Explore contract services by category</h2>
-      <p class="muted">
+      <p class="muted text-limit">
         Choose a service area below to browse relevant providers. If you’re not sure where you fit, start with
         <strong>Drug Substance</strong> or <strong>Drug Product</strong>, then narrow down by expertise and scale.
       </p>
@@ -117,130 +117,415 @@
       </div>
     </section>
 
-    <!-- HOW TO USE -->
-    <section class="card section-pad" aria-label="How to use">
-      <h2>How to use this directory (in 60 seconds)</h2>
-
-      <ol class="steps">
-        <li>
-          <div class="n" aria-hidden="true">1</div>
-          <p class="t"><strong>Pick a category</strong> (Drug Substance or Drug Product) that matches your program stage.</p>
-        </li>
-        <li>
-          <div class="n" aria-hidden="true">2</div>
-          <p class="t"><strong>Filter by region, scale, and qualifications</strong> to narrow your shortlist.</p>
-        </li>
-        <li>
-          <div class="n" aria-hidden="true">3</div>
-          <p class="t"><strong>Compare supplier profiles</strong> for capabilities, relevant experience, and documentation readiness.</p>
-        </li>
-        <li>
-          <div class="n" aria-hidden="true">4</div>
-          <p class="t"><strong>Contact providers</strong> with a concise project brief to confirm fit and timelines.</p>
-        </li>
-      </ol>
-
-      <h3 class="section-subtitle">What to include in your first message</h3>
-      <ul class="muted list">
-        <li>Product type (Drug Substance / Drug Product) and <strong>dosage form</strong> (if applicable)</li>
-        <li>Development stage (early dev / clinical / commercial)</li>
-        <li>Expected batch sizes and <strong>target markets</strong> (EU/US/other)</li>
-        <li>Quality expectations (e.g., GMP, audit readiness)</li>
-        <li>Key timelines (tech transfer, launch, supply continuity)</li>
-      </ul>
-    </section>
-
-    <!-- OVERVIEW TABLE -->
-    <section class="card section-pad" aria-label="Service coverage overview">
-      <h2>Contract manufacturing services covered on Pharmaoffer</h2>
-
-      <div class="table-wrap" role="region" aria-label="Services table">
-        <table>
-          <thead>
-            <tr>
-              <th>Area</th>
-              <th>What you can source here</th>
-              <th>Typical outcomes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Drug Substance (CDMO/CRO)</strong></td>
-              <td>APIs, biologics, peptides, oligonucleotides, intermediates, fine chemicals, cell &amp; gene therapy (DS)</td>
-              <td>Drug substance partner shortlist, tech transfer readiness checks</td>
-            </tr>
-            <tr>
-              <td><strong>Drug Product (CMO)</strong></td>
-              <td>Oral solids, liquids, semi-solids, ophthalmic/nasal/inhalation, biologics (DP), sterile injectables (vials, PFS, lyophilized, ampoules, pens)</td>
-              <td>Drug product partner shortlist, dosage-form fit confirmation</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- DIRECTORY PLACEHOLDER (swap for real UI) -->
-    <section id="directory" class="directory-shell" aria-label="Provider directory">
-      <h2 class="directory-title">Browse providers</h2>
-      <p class="muted directory-intro">
-        Placeholder block. Replace with your real filters + provider list components.
-      </p>
-
-      <div class="shell-row" aria-label="Filter controls placeholder">
-        <span class="pill">Filter: Region</span>
-        <span class="pill">Filter: Capabilities</span>
-        <span class="pill">Filter: Credentials</span>
-        <span class="pill">Filter: Production scale</span>
-        <span class="pill">Sort: Relevance</span>
-        <span class="pill">Showing: {{provider_count}} providers</span>
+    <!-- DIRECTORY -->
+    <section id="directory" class="directory-section" aria-label="Provider directory">
+      <div class="directory-header">
+        <div>
+          <h2 class="directory-title">Browse providers</h2>
+          <p class="muted directory-intro text-limit">
+            Search and compare contract manufacturing partners across drug substance and drug product. Use the filters to
+            align on capability, compliance, and scale, then move to direct conversations with qualified suppliers.
+          </p>
+        </div>
+        <div class="directory-summary">
+          <span class="result-count">Showing {{provider_count}} providers</span>
+          <div class="sort-control">
+            <label for="sort-order" class="meta-label">Sort by</label>
+            <select id="sort-order" name="sort-order">
+              <option>Relevance</option>
+              <option>Region match</option>
+              <option>Newest profiles</option>
+            </select>
+          </div>
+        </div>
       </div>
 
-      <div class="provider-grid" role="list" aria-label="Provider cards placeholder">
-        <article class="provider-card" role="listitem">
-          <p class="name">Example CDMO A</p>
-          <p class="muted provider-meta">EU • GMP • Oral solid • Tech transfer</p>
-          <div class="tags" aria-label="Capability tags">
-            <span class="tag">Oral solid</span><span class="tag">Tablets</span><span class="tag">Capsules</span>
-          </div>
-          <div class="provider-cta">
-            <a class="btn btn-primary" href="#">Request quote <span class="arrow" aria-hidden="true">→</span></a>
-          </div>
+      <div class="directory-guides">
+        <article id="how-it-works" class="card section-pad">
+          <h3>How to use this directory (in 60 seconds)</h3>
+
+          <ol class="steps">
+            <li>
+              <div class="n" aria-hidden="true">1</div>
+              <p class="t"><strong>Pick a category</strong> (Drug Substance or Drug Product) that matches your program stage.</p>
+            </li>
+            <li>
+              <div class="n" aria-hidden="true">2</div>
+              <p class="t"><strong>Filter by region, scale, and qualifications</strong> to narrow your shortlist.</p>
+            </li>
+            <li>
+              <div class="n" aria-hidden="true">3</div>
+              <p class="t"><strong>Compare supplier profiles</strong> for capabilities, relevant experience, and documentation readiness.</p>
+            </li>
+            <li>
+              <div class="n" aria-hidden="true">4</div>
+              <p class="t"><strong>Contact providers</strong> with a concise project brief to confirm fit and timelines.</p>
+            </li>
+          </ol>
+
+          <h4 class="section-subtitle">What to include in your first message</h4>
+          <ul class="muted list">
+            <li>Product type (Drug Substance / Drug Product) and <strong>dosage form</strong> (if applicable)</li>
+            <li>Development stage (early dev / clinical / commercial)</li>
+            <li>Expected batch sizes and <strong>target markets</strong> (EU/US/other)</li>
+            <li>Quality expectations (e.g., GMP, audit readiness)</li>
+            <li>Key timelines (tech transfer, launch, supply continuity)</li>
+          </ul>
         </article>
 
-        <article class="provider-card" role="listitem">
-          <p class="name">Example CDMO B</p>
-          <p class="muted provider-meta">USA • Sterile • Fill-finish • PFS</p>
-          <div class="tags">
-            <span class="tag">Sterile</span><span class="tag">PFS</span><span class="tag">Lyophilization</span>
-          </div>
-          <div class="provider-cta">
-            <a class="btn btn-primary" href="#">Request quote <span class="arrow" aria-hidden="true">→</span></a>
-          </div>
-        </article>
+        <article id="services" class="card section-pad" aria-label="Service coverage overview">
+          <h3>Contract manufacturing services covered on Pharmaoffer</h3>
 
-        <article class="provider-card" role="listitem">
-          <p class="name">Example CDMO C</p>
-          <p class="muted provider-meta">India • API • Small molecules • GMP</p>
-          <div class="tags">
-            <span class="tag">API</span><span class="tag">Small molecules</span><span class="tag">ICH Q7</span>
-          </div>
-          <div class="provider-cta">
-            <a class="btn btn-primary" href="#">Request quote <span class="arrow" aria-hidden="true">→</span></a>
+          <div class="table-wrap" role="region" aria-label="Services table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Area</th>
+                  <th>What you can source here</th>
+                  <th>Typical outcomes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Drug Substance (CDMO/CRO)</strong></td>
+                  <td>APIs, biologics, peptides, oligonucleotides, intermediates, fine chemicals, cell &amp; gene therapy (DS)</td>
+                  <td>Drug substance partner shortlist, tech transfer readiness checks</td>
+                </tr>
+                <tr>
+                  <td><strong>Drug Product (CMO)</strong></td>
+                  <td>Oral solids, liquids, semi-solids, ophthalmic/nasal/inhalation, biologics (DP), sterile injectables (vials, PFS, lyophilized, ampoules, pens)</td>
+                  <td>Drug product partner shortlist, dosage-form fit confirmation</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </article>
       </div>
 
-      <div class="shell-row" aria-label="Pagination placeholder">
-        <span class="pill">Page 1</span>
-        <span class="pill">Page 2</span>
-        <span class="pill">Page 3</span>
+      <div class="directory-layout">
+        <aside id="filters" class="filters-panel" aria-label="Filter providers">
+          <div class="filters-header">
+            <h3>Filters</h3>
+            <button class="btn btn-link" type="button">Clear filters</button>
+          </div>
+
+          <div class="filter-search">
+            <input type="search" name="filter-search" placeholder="Search filters" aria-label="Search filters" />
+          </div>
+
+          <details class="filter-group" open>
+            <summary>Region</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> North America</label>
+              <label class="filter-option"><input type="checkbox" /> Europe</label>
+              <label class="filter-option"><input type="checkbox" /> APAC</label>
+              <label class="filter-option"><input type="checkbox" /> MENAT</label>
+              <label class="filter-option"><input type="checkbox" /> LATAM</label>
+            </div>
+          </details>
+
+          <details class="filter-group" open>
+            <summary>Category / Product</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> CHEMICAL-SYNTHETIC</label>
+              <label class="filter-option"><input type="checkbox" /> BIOLOGICS</label>
+              <label class="filter-option"><input type="checkbox" /> OLIGONUCLEOTIDES</label>
+              <label class="filter-option"><input type="checkbox" /> PARTICLE ENGINEERING</label>
+              <label class="filter-option"><input type="checkbox" /> FDF / DRUG PRODUCTS</label>
+              <label class="filter-option"><input type="checkbox" /> COSMETICS</label>
+              <label class="filter-option"><input type="checkbox" /> NUTRACEUTICALS</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>Services</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> Development</label>
+              <label class="filter-option"><input type="checkbox" /> Manufacturing</label>
+              <label class="filter-option"><input type="checkbox" /> Analytical/QC</label>
+              <label class="filter-option"><input type="checkbox" /> QA</label>
+              <label class="filter-option"><input type="checkbox" /> Regulatory</label>
+              <label class="filter-option"><input type="checkbox" /> Packaging</label>
+              <label class="filter-option"><input type="checkbox" /> Logistics</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>Batch size</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> Small</label>
+              <label class="filter-option"><input type="checkbox" /> Medium</label>
+              <label class="filter-option"><input type="checkbox" /> Large</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>Stage</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> Investigational</label>
+              <label class="filter-option"><input type="checkbox" /> Commercial (Phase IV)</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>Use</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> Human</label>
+              <label class="filter-option"><input type="checkbox" /> Veterinary</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>Therapeutic areas (ATC)</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> A (Alimentary tract)</label>
+              <label class="filter-option"><input type="checkbox" /> B (Blood)</label>
+              <label class="filter-option"><input type="checkbox" /> C (Cardiovascular)</label>
+              <label class="filter-option"><input type="checkbox" /> L (Antineoplastic)</label>
+              <label class="filter-option"><input type="checkbox" /> N (Nervous system)</label>
+              <label class="filter-option"><input type="checkbox" /> R (Respiratory)</label>
+              <label class="filter-option"><input type="checkbox" /> V06 (General nutrients)</label>
+              <label class="filter-option"><input type="checkbox" /> V09-10 (Diagnostic agents)</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>OEB</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> OEB 1</label>
+              <label class="filter-option"><input type="checkbox" /> OEB 2</label>
+              <label class="filter-option"><input type="checkbox" /> OEB 3</label>
+              <label class="filter-option"><input type="checkbox" /> OEB 4</label>
+              <label class="filter-option"><input type="checkbox" /> OEB 5</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>BSL</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> BSL 1</label>
+              <label class="filter-option"><input type="checkbox" /> BSL 2</label>
+              <label class="filter-option"><input type="checkbox" /> BSL 3</label>
+              <label class="filter-option"><input type="checkbox" /> BSL 4</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>Controlled substances</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> Lowest potential</label>
+              <label class="filter-option"><input type="checkbox" /> Moderate potential</label>
+              <label class="filter-option"><input type="checkbox" /> High potential</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>Certifications</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> ISO</label>
+              <label class="filter-option"><input type="checkbox" /> WHO GMP</label>
+              <label class="filter-option"><input type="checkbox" /> FDA</label>
+              <label class="filter-option"><input type="checkbox" /> EMA</label>
+              <label class="filter-option"><input type="checkbox" /> PMDA</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>Markets</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> FDA</label>
+              <label class="filter-option"><input type="checkbox" /> EMA</label>
+              <label class="filter-option"><input type="checkbox" /> PMDA</label>
+              <label class="filter-option"><input type="checkbox" /> ANVISA</label>
+              <label class="filter-option"><input type="checkbox" /> Health Canada</label>
+            </div>
+          </details>
+        </aside>
+
+        <div class="results" aria-live="polite">
+          <div class="results-list" role="list" aria-label="Provider cards">
+            <article class="card search-result-card" role="listitem" data-provider-id="cdmo-01" data-region="Europe" data-category="Drug Substance">
+              <div class="card-top">
+                <div class="company-logo" aria-hidden="true">AX</div>
+                <div>
+                  <div class="company-header">
+                    <div>
+                      <h3 class="company-title">Axiom BioSolutions</h3>
+                      <a class="company-link" href="#">Discover our facility →</a>
+                    </div>
+                    <div class="company-badges">
+                      <span class="badge">Europe</span>
+                      <span class="badge">Germany</span>
+                      <span class="badge">GMP</span>
+                    </div>
+                  </div>
+                  <p class="result-description">
+                    Integrated CDMO for small molecules and peptides with development-to-commercial support, high-containment suites,
+                    and dedicated tech transfer teams for global launches.
+                  </p>
+                  <div class="result-meta">
+                    <ul class="meta-list">
+                      <li>
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Drug Substance (Small molecules)</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Capabilities</span>
+                        <span class="meta-value">Process development, scale-up, HPAPI, analytical/QC</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Batch size</span>
+                        <span class="meta-value">Small to medium</span>
+                      </li>
+                    </ul>
+                    <ul class="meta-list">
+                      <li>
+                        <span class="meta-label">Regulatory</span>
+                        <span class="meta-value">EMA, FDA, PMDA experience</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Certifications</span>
+                        <span class="meta-value">ISO 9001, EU GMP, WHO GMP</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Lead time</span>
+                        <span class="meta-value">12-20 weeks (typical)</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-cta">
+                    <a class="btn btn-primary" href="#">Request quote <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card search-result-card" role="listitem" data-provider-id="cdmo-02" data-region="North America" data-category="Drug Product">
+              <div class="card-top">
+                <div class="company-logo" aria-hidden="true">HP</div>
+                <div>
+                  <div class="company-header">
+                    <div>
+                      <h3 class="company-title">Helix Pharma Manufacturing</h3>
+                      <a class="company-link" href="#">Discover our facility →</a>
+                    </div>
+                    <div class="company-badges">
+                      <span class="badge">North America</span>
+                      <span class="badge">USA</span>
+                      <span class="badge">Sterile</span>
+                    </div>
+                  </div>
+                  <p class="result-description">
+                    Sterile fill-finish specialist with multi-format lines for vials, PFS, and cartridges. Strong QA release processes and
+                    inspection-ready documentation for commercial markets.
+                  </p>
+                  <div class="result-meta">
+                    <ul class="meta-list">
+                      <li>
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Drug Product (Sterile injectables)</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Capabilities</span>
+                        <span class="meta-value">Fill-finish, lyophilization, visual inspection</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Batch size</span>
+                        <span class="meta-value">Medium to large</span>
+                      </li>
+                    </ul>
+                    <ul class="meta-list">
+                      <li>
+                        <span class="meta-label">Markets</span>
+                        <span class="meta-value">FDA, EMA</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Certifications</span>
+                        <span class="meta-value">cGMP, ISO 13485</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Lead time</span>
+                        <span class="meta-value">10-16 weeks (typical)</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-cta">
+                    <a class="btn btn-primary" href="#">Request quote <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card search-result-card" role="listitem" data-provider-id="cdmo-03" data-region="APAC" data-category="Drug Substance">
+              <div class="card-top">
+                <div class="company-logo" aria-hidden="true">VN</div>
+                <div>
+                  <div class="company-header">
+                    <div>
+                      <h3 class="company-title">VertexNexus Lifesciences</h3>
+                      <a class="company-link" href="#">Discover our facility →</a>
+                    </div>
+                    <div class="company-badges">
+                      <span class="badge">APAC</span>
+                      <span class="badge">India</span>
+                      <span class="badge">Biologics</span>
+                    </div>
+                  </div>
+                  <p class="result-description">
+                    Biologics-focused CDMO supporting cell line development, upstream/downstream processing, and aseptic manufacturing.
+                    Experienced with biosimilars and emerging market registrations.
+                  </p>
+                  <div class="result-meta">
+                    <ul class="meta-list">
+                      <li>
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Drug Substance (Biologics)</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Capabilities</span>
+                        <span class="meta-value">Cell line, DSP, USP, analytical/QC</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Batch size</span>
+                        <span class="meta-value">Small to medium</span>
+                      </li>
+                    </ul>
+                    <ul class="meta-list">
+                      <li>
+                        <span class="meta-label">Markets</span>
+                        <span class="meta-value">WHO, EMA, regional agencies</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Certifications</span>
+                        <span class="meta-value">WHO GMP, ISO 14001</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Lead time</span>
+                        <span class="meta-value">14-22 weeks (typical)</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-cta">
+                    <a class="btn btn-primary" href="#">Request quote <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="directory-pagination" aria-label="Pagination">
+            <span class="pill">Page 1</span>
+            <span class="pill">Page 2</span>
+            <span class="pill">Page 3</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- GUIDE -->
     <section id="guide" class="card section-pad">
       <h2>Pharmaceutical contract manufacturing: how to shortlist the right partner</h2>
-      <p class="muted">
+      <p class="muted text-limit">
         Choosing a contract manufacturing organization is rarely about one factor. The best CDMO services match
         <strong>technical capability</strong>, <strong>quality systems</strong>, and <strong>capacity</strong> with your development stage.
         Use the directory above to create a shortlist, then validate fit through focused questions.
@@ -249,25 +534,25 @@
       <h3>Key selection criteria</h3>
 
       <h3 class="guide-h">1) Capability and scope</h3>
-      <p class="muted">
+      <p class="muted text-limit">
         Confirm the provider’s actual scope (development, scale-up, validation, routine manufacturing, packaging, analytical support).
         “Yes, we do that” is not the same as “we do that routinely”.
       </p>
 
       <h3 class="guide-h">2) Quality and regulatory readiness</h3>
-      <p class="muted">
+      <p class="muted text-limit">
         For regulated supply, prioritize documented GMP experience and clear audit readiness. If your target markets include the EU or US,
         align expectations early (documentation style, data integrity practices, deviation management).
       </p>
 
       <h3 class="guide-h">3) Scale and capacity</h3>
-      <p class="muted">
+      <p class="muted text-limit">
         A provider can be technically perfect and still wrong if they can’t support your batch sizes or timeline.
         Filter by production scale to avoid mismatches.
       </p>
 
       <h3 class="guide-h">4) Geography and supply chain</h3>
-      <p class="muted">
+      <p class="muted text-limit">
         Region can matter for lead times, logistics, and risk management. If you require dual sourcing, shortlist across multiple regions
         and validate contingency options early.
       </p>
