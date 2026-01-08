@@ -438,6 +438,29 @@ input[type="text"]:focus{
 @media (max-width: 980px){
   .footer-grid{ grid-template-columns: 1fr; }
 }
+/* Breadcrumbs */
+.breadcrumbs{
+  margin: 16px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--c-text);
+}
+.breadcrumbs ol{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.breadcrumbs li::after{
+  content: "/";
+  margin-left: 8px;
+  color: var(--g-200);
+}
+.breadcrumbs li:last-child::after{ content: ""; }
+.breadcrumbs a{ color: var(--c-secondary); }
 
 
 /* Focus styles */
