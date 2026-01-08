@@ -614,3 +614,49 @@
   font-weight: 500;
   font-size: 13px;
 }
+
+/* ===== Post-directory SEO stack (below provider list) ===== */
+
+.post-seo{
+  margin-top: 18px;
+  display: grid;
+  gap: 18px;
+}
+
+/* Make headings a bit tighter in long SEO sections */
+.post-seo h2{
+  margin-bottom: .35em;
+}
+.post-seo h3{
+  margin-top: 14px;
+  margin-bottom: .35em;
+}
+
+/* Fix: table-wrap inside a card currently looks like “card inside card” */
+.post-seo .card .table-wrap{
+  box-shadow: none;
+  border: 1px solid var(--g-100);
+}
+
+/* Make steps in these sections slightly denser (less vertical bloat) */
+.post-seo .steps{
+  margin-top: 12px;
+}
+.post-seo .steps li{
+  padding: 12px;
+}
+.post-seo .steps .t{
+  line-height: 1.45;
+}
+
+/* CTA row spacing */
+.post-seo .hero-ctas{
+  margin-top: 14px;
+}
+
+/* Optional: keep long paragraphs readable even with wider container */
+.post-seo .text-limit,
+.post-seo p.muted{
+  max-width: 78ch;
+}
+
