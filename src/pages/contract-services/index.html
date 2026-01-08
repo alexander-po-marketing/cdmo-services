@@ -27,9 +27,8 @@
   <!-- Injected by src/js/includes.js -->
   <div id="site-header"></div>
 
-  <main class="site-main">
-
-    <!-- HERO BAND -->
+  <main>
+    <!-- HERO BAND (compact, current-site style) -->
     <section class="hero-band" aria-label="Contract services hero">
       <div class="container hero-band-inner">
         <!-- Breadcrumbs (kept, just styled as chips in hero) -->
@@ -46,262 +45,33 @@
 
             <p class="hero-subtitle text-limit">
               Find and compare CDMO companies providing pharmaceutical contract manufacturing services across drug substance and drug product.
-              Use filters to shortlist by capability, quality credentials, scale, and region. Then contact providers directly to start a sourcing conversation.
+              Use filters to shortlist by capability, quality credentials, production scale, and region. Then contact providers directly to start a sourcing conversation.
             </p>
 
             <div class="hero-stats" aria-label="Directory stats">
               <span class="stat-chip"><strong>{{provider_count}}</strong> providers</span>
               <span class="stat-chip">Top regions: <strong>{{top_regions}}</strong></span>
             </div>
-
-            <div class="hero-ctas">
-              <a class="btn btn-primary" href="#directory">
-                Browse providers
-                <span class="arrow" aria-hidden="true">→</span>
-              </a>
-              <a class="btn btn-secondary" href="#open-inquiry">
-                Send open inquiry
-                <span class="arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
           </div>
 
-          <!-- Highlights + trust are collapsible to reduce hero height -->
-          <details class="hero-details" open>
-            <summary class="hero-details-title">What you can do here</summary>
+          <!-- Keep the original “highlights + trust” content, but collapsible to reduce hero height -->
+          <div class="hero-details">
+            <h2 class="hero-details-title">What you can do here</h2>
             <ul class="bullets" aria-label="Highlights">
               <li><span class="dot" aria-hidden="true"></span><span><strong>Two tracks:</strong> Drug Substance (CDMO/CRO) and Drug Product (CMO)</span></li>
               <li><span class="dot" aria-hidden="true"></span><span><strong>Compare faster:</strong> capabilities, credentials, scale, and regions</span></li>
               <li><span class="dot" aria-hidden="true"></span><span><strong>Actionable:</strong> shortlist and contact suppliers from one place</span></li>
               <li><span class="dot" aria-hidden="true"></span><span><strong>Built for sourcing:</strong> start broad, narrow down, message providers</span></li>
             </ul>
-            <p class="hero-trust muted">
-              Supplier profiles include publicly available information and direct submissions; credentials are shown where provided and available.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- DIRECTORY (companies first) -->
-    <section id="directory" class="container directory-section" aria-label="Provider directory">
-      <div class="directory-header">
-        <div class="directory-title-block">
-          <h2 class="section-title">Browse providers</h2>
-          <p class="muted directory-subtitle">
-            Filter by capability, qualifications, region, and scale to build a shortlist.
-          </p>
-        </div>
-
-        <aside class="promo-card" aria-label="Sourcing CTA">
-          <h3>Need help finding the right fit?</h3>
-          <p class="muted">
-            Send one open inquiry and collect responses from relevant suppliers. Faster shortlisting, less back-and-forth.
-          </p>
-          <a class="btn btn-primary" href="#open-inquiry">
-            Send open inquiry
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
-        </aside>
-      </div>
-
-      <div class="directory-layout">
-        <!-- Filters sidebar -->
-        <aside class="filters" aria-label="Filters">
-          <div class="filters-head">
-            <h3 class="filters-title">Filters</h3>
-            <button class="btn btn-link" type="button">Clear</button>
-          </div>
-
-          <div class="filters-groups">
-            <details class="filter-group" open>
-              <summary>Region</summary>
-              <div class="filter-options">
-                <label><input type="checkbox" /> North America</label>
-                <label><input type="checkbox" /> Europe</label>
-                <label><input type="checkbox" /> APAC</label>
-                <label><input type="checkbox" /> MENAT</label>
-                <label><input type="checkbox" /> LATAM</label>
-              </div>
-            </details>
-
-            <details class="filter-group">
-              <summary>Category / Product</summary>
-              <div class="filter-options">
-                <label><input type="checkbox" /> CHEMICAL-SYNTHETIC</label>
-                <label><input type="checkbox" /> BIOLOGICS</label>
-                <label><input type="checkbox" /> OLIGONUCLEOTIDES</label>
-                <label><input type="checkbox" /> PARTICLE ENGINEERING</label>
-                <label><input type="checkbox" /> FDF / DRUG PRODUCTS</label>
-                <label><input type="checkbox" /> COSMETICS</label>
-                <label><input type="checkbox" /> NUTRACEUTICALS</label>
-              </div>
-            </details>
-
-            <details class="filter-group">
-              <summary>Batch size</summary>
-              <div class="filter-options">
-                <label><input type="checkbox" /> Small</label>
-                <label><input type="checkbox" /> Medium</label>
-                <label><input type="checkbox" /> Large</label>
-              </div>
-            </details>
-
-            <details class="filter-group">
-              <summary>Stage</summary>
-              <div class="filter-options">
-                <label><input type="checkbox" /> Investigational</label>
-                <label><input type="checkbox" /> Commercial (Phase IV)</label>
-              </div>
-            </details>
-
-            <details class="filter-group">
-              <summary>Certifications</summary>
-              <div class="filter-options">
-                <label><input type="checkbox" /> FDA (cGMP)</label>
-                <label><input type="checkbox" /> EMA (EU GMP)</label>
-                <label><input type="checkbox" /> ISO</label>
-                <label><input type="checkbox" /> ECOVADIS</label>
-              </div>
-            </details>
-          </div>
-        </aside>
-
-        <!-- Results -->
-        <div class="results" aria-label="Results">
-          <div class="results-toolbar" aria-label="Results controls">
-            <div class="results-left">
-              <span class="results-count"><strong>{{provider_count}}</strong> providers</span>
-            </div>
-
-            <div class="results-right">
-              <label class="sr-only" for="q">Search providers</label>
-              <input id="q" type="search" placeholder="Search providers..." />
-
-              <label class="sr-only" for="sort">Sort</label>
-              <select id="sort">
-                <option>Sort: Relevance</option>
-                <option>Sort: Name (A–Z)</option>
-                <option>Sort: Region</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Example cards (replace with real results) -->
-          <div class="results-list" role="list" aria-label="Provider results list">
-            <article class="search-result-card" role="listitem">
-              <div class="result-top">
-                <a class="result-logo" href="#" aria-label="Example CDMO A">
-                  <img src="https://placehold.co/120x120?text=Logo" alt="Example CDMO A logo" />
-                </a>
-
-                <div class="result-main">
-                  <div class="result-badges">
-                    <span class="badge">Germany</span>
-                    <span class="badge">Europe</span>
-                  </div>
-
-                  <h3 class="result-title">
-                    <a href="#">Example CDMO A</a>
-                    <span class="discover"><a href="#">Discover our facility</a></span>
-                  </h3>
-
-                  <p class="result-description">
-                    Contract development and manufacturing partner specialized in tech transfer and cGMP manufacturing.
-                  </p>
-
-                  <div class="result-meta">
-                    <ul class="result-kv">
-                      <li><strong>Activity:</strong> CHEMICAL-SYNTHETIC manufacturing</li>
-                      <li><strong>Uses:</strong> Commercial (Phase IV)</li>
-                      <li><strong>Certifications:</strong> EMA (EU GMP), FDA (cGMP), ECOVADIS</li>
-                      <li><strong>Services:</strong> R&amp;D, Process development, Optimization</li>
-                    </ul>
-                    <ul class="result-kv">
-                      <li><strong>Batch Size / Reactor:</strong> Small, Medium</li>
-                      <li><strong>Controlled substance:</strong> Lower potential for abuse</li>
-                      <li><strong>BSL:</strong> 1, 2</li>
-                      <li><strong>Markets:</strong> FDA, EMA, PMDA</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="result-cta">
-                  <a class="btn btn-primary" href="#">
-                    Request quote
-                    <span class="arrow" aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="search-result-card" role="listitem">
-              <div class="result-top">
-                <a class="result-logo" href="#" aria-label="Example CDMO B">
-                  <img src="https://placehold.co/120x120?text=Logo" alt="Example CDMO B logo" />
-                </a>
-
-                <div class="result-main">
-                  <div class="result-badges">
-                    <span class="badge">USA</span>
-                    <span class="badge">North America</span>
-                  </div>
-
-                  <h3 class="result-title">
-                    <a href="#">Example CDMO B</a>
-                    <span class="discover"><a href="#">Discover our facility</a></span>
-                  </h3>
-
-                  <p class="result-description">
-                    Sterile fill-finish provider supporting vials, prefilled syringes, and lyophilization programs.
-                  </p>
-
-                  <div class="result-meta">
-                    <ul class="result-kv">
-                      <li><strong>Category:</strong> Sterile injectables</li>
-                      <li><strong>Formats:</strong> PFS, vials, lyophilized powders</li>
-                      <li><strong>Certifications:</strong> FDA (cGMP)</li>
-                    </ul>
-                    <ul class="result-kv">
-                      <li><strong>Capacity:</strong> Medium, Large</li>
-                      <li><strong>Markets:</strong> FDA, EMA</li>
-                      <li><strong>Services:</strong> Manufacturing, QC, Packaging</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="result-cta">
-                  <a class="btn btn-primary" href="#">
-                    Request quote
-                    <span class="arrow" aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="pagination" aria-label="Pagination">
-            <a class="pill" href="#">Page 1</a>
-            <a class="pill" href="#">Page 2</a>
-            <a class="pill" href="#">Page 3</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container quick-routing" aria-label="Quick routing">
-      <div class="shell-row quick-routing-row">
-        <a class="pill pill--link" href="/contract-services/drug-substance-cdmo-cro/">Drug Substance (CDMO/CRO)</a>
-        <a class="pill pill--link" href="/contract-services/drug-product-cmo/">Drug Product (CMO)</a>
-        <a class="pill pill--link" href="#glossary">CDMO vs CMO vs CRO</a>
-        <a class="pill pill--link" href="#decision-tree">Outsourcing decision tree</a>
-      </div>
-    </section>
-
-    <!-- CATEGORIES (moved below directory; visually lighter) -->
-    <section id="categories" class="container card section-pad info-section categories-lite">
-      <h2>Explore contract services by category</h2>
-      <p class="muted">
+    <!-- CATEGORIES (kept, moved above directory for quick access) -->
+    <section id="categories" class="container card section-pad info-section">
+      <h2 class="section-title">Explore contract services by category</h2>
+      <p class="muted text-limit">
         Choose a service area below to browse relevant providers. If you’re not sure where you fit, start with
         <strong>Drug Substance</strong> or <strong>Drug Product</strong>, then narrow down by expertise and scale.
       </p>
@@ -317,275 +87,480 @@
           <p class="desc">Dosage forms, sterile injectables, fill-finish formats, and manufacturing execution.</p>
         </a>
 
-        <a class="tile" href="#open-inquiry" role="listitem">
-          <p class="title">Send an open inquiry</p>
-          <p class="desc">Not sure what you need? Share your requirements and get responses from suitable suppliers.</p>
+        <a class="tile" href="#directory" role="listitem">
+          <p class="title">Browse all providers</p>
+          <p class="desc">Filter by capability, credentials, region, and scale to build a shortlist.</p>
         </a>
       </div>
     </section>
 
+    <!-- DIRECTORY (main focus) -->
+    <section id="directory" class="container directory-section" aria-label="Provider directory">
+      <div class="directory-layout">
+        <aside id="filters" class="filters-panel" aria-label="Filter providers">
+          <div class="filters-header">
+            <h2 class="filters-title">Filter</h2>
+            <button class="btn btn-link" type="button">Clear</button>
+          </div>
+
+          <details class="filter-group" open>
+            <summary>Region</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> North America</label>
+              <label class="filter-option"><input type="checkbox" /> Europe</label>
+              <label class="filter-option"><input type="checkbox" /> APAC</label>
+              <label class="filter-option"><input type="checkbox" /> MENAT</label>
+              <label class="filter-option"><input type="checkbox" /> LATAM</label>
+            </div>
+          </details>
+
+          <details class="filter-group" open>
+            <summary>Category / Product</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> CHEMICAL-SYNTHETIC</label>
+              <label class="filter-option"><input type="checkbox" /> BIOLOGICS</label>
+              <label class="filter-option"><input type="checkbox" /> OLIGONUCLEOTIDES</label>
+              <label class="filter-option"><input type="checkbox" /> PARTICLE ENGINEERING</label>
+              <label class="filter-option"><input type="checkbox" /> FDF / DRUG PRODUCTS</label>
+              <label class="filter-option"><input type="checkbox" /> COSMETICS</label>
+              <label class="filter-option"><input type="checkbox" /> NUTRACEUTICALS</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>Batch size</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> Small</label>
+              <label class="filter-option"><input type="checkbox" /> Medium</label>
+              <label class="filter-option"><input type="checkbox" /> Large</label>
+            </div>
+          </details>
+
+          <details class="filter-group">
+            <summary>Certifications</summary>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" /> ISO</label>
+              <label class="filter-option"><input type="checkbox" /> WHO GMP</label>
+              <label class="filter-option"><input type="checkbox" /> FDA</label>
+              <label class="filter-option"><input type="checkbox" /> EMA</label>
+              <label class="filter-option"><input type="checkbox" /> PMDA</label>
+            </div>
+          </details>
+        </aside>
+
+        <div class="results" aria-live="polite">
+          <div class="results-header">
+            <div class="results-heading">
+              <h2 class="results-title section-title">CDMO providers</h2>
+              <p class="results-subtitle">Showing <strong>{{provider_count}}</strong> verified and active profiles</p>
+              <div class="results-controls">
+                <div class="results-search">
+                  <input type="search" placeholder="Search CDMOs, regions, capabilities…" aria-label="Search providers" />
+                </div>
+              </div>
+            </div>
+
+            <aside class="promo-card" aria-label="Special inquiry">
+              <h3>Sending an open inquiry</h3>
+              <p class="muted">Send one inquiry and we’ll match you with relevant CDMOs/CMOs for your project. Share your product type, stage, batch size, and quality requirements to start receiving responses.</p>
+              <a class="btn btn-secondary" href="#">
+                Send an open inquiry
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </aside>
+          </div>
+
+          <div class="results-list" role="list" aria-label="Provider cards">
+            <article class="card search-result-card" role="listitem" data-provider-id="cdmo-01" data-region="Europe" data-category="Drug Substance">
+              <div class="card-top">
+                <div class="company-logo" aria-hidden="true">AX</div>
+
+                <div class="company-main">
+                  <div class="company-header">
+                    <div>
+                      <h3 class="company-title">Axiom BioSolutions</h3>
+                      <a class="company-link" href="#">Discover our facility →</a>
+                    </div>
+                    <div class="company-badges">
+                      <span class="badge">Europe</span>
+                      <span class="badge">Germany</span>
+                      <span class="badge">GMP</span>
+                    </div>
+                  </div>
+
+                  <p class="result-description">
+                    Integrated CDMO for small molecules and peptides with development-to-commercial support, high-containment suites,
+                    and dedicated tech transfer teams for global launches.
+                  </p>
+
+                  <div class="result-meta">
+                    <ul class="meta-list">
+                      <li>
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Drug Substance (Small molecules)</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Capabilities</span>
+                        <span class="meta-value">Process development, scale-up, HPAPI, analytical/QC</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Batch size</span>
+                        <span class="meta-value">Small to medium</span>
+                      </li>
+                    </ul>
+                    <ul class="meta-list">
+                      <li>
+                        <span class="meta-label">Regulatory</span>
+                        <span class="meta-value">EMA, FDA, PMDA experience</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Certifications</span>
+                        <span class="meta-value">ISO 9001, EU GMP, WHO GMP</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Lead time</span>
+                        <span class="meta-value">12-20 weeks (typical)</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="card-cta">
+                  <a class="btn btn-primary" href="#">Request a quote <span class="arrow" aria-hidden="true">→</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card search-result-card" role="listitem" data-provider-id="cdmo-02" data-region="North America" data-category="Drug Product">
+              <div class="card-top">
+                <div class="company-logo" aria-hidden="true">HP</div>
+
+                <div class="company-main">
+                  <div class="company-header">
+                    <div>
+                      <h3 class="company-title">Helix Pharma Manufacturing</h3>
+                      <a class="company-link" href="#">Discover our facility →</a>
+                    </div>
+                    <div class="company-badges">
+                      <span class="badge">North America</span>
+                      <span class="badge">USA</span>
+                      <span class="badge">Sterile</span>
+                    </div>
+                  </div>
+
+                  <p class="result-description">
+                    Sterile fill-finish specialist with multi-format lines for vials, PFS, and cartridges. Strong QA release processes and
+                    inspection-ready documentation for commercial markets.
+                  </p>
+
+                  <div class="result-meta">
+                    <ul class="meta-list">
+                      <li>
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Drug Product (Sterile injectables)</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Formats</span>
+                        <span class="meta-value">Vials, PFS, ampoules, lyophilized powders</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Batch size</span>
+                        <span class="meta-value">Medium to large</span>
+                      </li>
+                    </ul>
+                    <ul class="meta-list">
+                      <li>
+                        <span class="meta-label">Regulatory</span>
+                        <span class="meta-value">FDA, EMA, Health Canada</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Certifications</span>
+                        <span class="meta-value">cGMP, ISO 13485, EU GMP</span>
+                      </li>
+                      <li>
+                        <span class="meta-label">Lead time</span>
+                        <span class="meta-value">10-16 weeks (typical)</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="card-cta">
+                  <a class="btn btn-primary" href="#">Request a quote <span class="arrow" aria-hidden="true">→</span></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="directory-pagination" aria-label="Pagination">
+            <a class="pill" href="#">Page 1</a>
+            <a class="pill" href="#">Page 2</a>
+            <a class="pill" href="#">Page 3</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- =========================
-         POST-DIRECTORY SEO BLOCKS
-         Insert below provider list
-         ========================= -->
-    <div class="container post-seo">
+     POST-DIRECTORY SEO BLOCKS
+     Insert below provider list
+     ========================= -->
+<div class="container post-seo">
+<section class="card section-pad info-section" id="explore-services" aria-label="Explore services">
+  <h2>Explore outsourcing by service area</h2>
+  <p class="muted">
+    If you already know what you need, start with the right track and narrow down to the most relevant suppliers.
+  </p>
 
-      <section class="card section-pad info-section" id="explore-services" aria-label="Explore services">
-        <h2>Explore outsourcing by service area</h2>
-        <p class="muted">
-          If you already know what you need, start with the right track and narrow down to the most relevant suppliers.
-        </p>
+  <div class="grid" role="list">
+    <a class="tile" href="/contract-services/drug-substance-cdmo-cro/" role="listitem">
+      <p class="title">Drug Substance (CDMO/CRO)</p>
+      <p class="desc">
+        API and upstream manufacturing partners for small molecules, biologics, peptides, oligonucleotides, and more.
+      </p>
+      <p class="muted">Explore:</p>
+      <p class="desc">
+        Small Molecule APIs · Biologics · Peptides · Oligonucleotides · Intermediates · Fine Chemicals · Cell &amp; Gene Therapy
+      </p>
+    </a>
 
-        <div class="grid" role="list">
-          <a class="tile" href="/contract-services/drug-substance-cdmo-cro/" role="listitem">
-            <p class="title">Drug Substance (CDMO/CRO)</p>
-            <p class="desc">
-              API and upstream manufacturing partners for small molecules, biologics, peptides, oligonucleotides, and more.
-            </p>
-            <p class="muted">Explore:</p>
-            <p class="desc">
-              Small Molecule APIs · Biologics · Peptides · Oligonucleotides · Intermediates · Fine Chemicals · Cell &amp; Gene Therapy
-            </p>
-          </a>
+    <a class="tile" href="/contract-services/drug-product-cmo/" role="listitem">
+      <p class="title">Drug Product (CMO)</p>
+      <p class="desc">
+        Dosage form manufacturing and fill-finish partners for oral solids, liquids, semi-solids, sterile injectables, and advanced formats.
+      </p>
+      <p class="muted">Explore:</p>
+      <p class="desc">
+        Oral solid products · Liquid oral products · Semi-solid products · Sterile injectables · Inhalation · Ophthalmic · Prefilled syringes · Vials · Lyophilized powders
+      </p>
+    </a>
 
-          <a class="tile" href="/contract-services/drug-product-cmo/" role="listitem">
-            <p class="title">Drug Product (CMO)</p>
-            <p class="desc">
-              Dosage form manufacturing and fill-finish partners for oral solids, liquids, semi-solids, sterile injectables, and advanced formats.
-            </p>
-            <p class="muted">Explore:</p>
-            <p class="desc">
-              Oral solid products · Liquid oral products · Semi-solid products · Sterile injectables · Inhalation · Ophthalmic · Prefilled syringes · Vials · Lyophilized powders
-            </p>
-          </a>
+    <a class="tile" href="#decision-tree" role="listitem">
+      <p class="title">Not sure where to start?</p>
+      <p class="desc">Use the glossary and the decision tree to pick the right outsourcing model.</p>
+      <p class="muted">Quick link:</p>
+      <p class="desc">CDMO vs CMO vs CRO · How to choose the right model</p>
+    </a>
+  </div>
 
-          <a class="tile" href="#decision-tree" role="listitem">
-            <p class="title">Not sure where to start?</p>
-            <p class="desc">Use the glossary and the decision tree to pick the right outsourcing model.</p>
-            <p class="muted">Quick link:</p>
-            <p class="desc">CDMO vs CMO vs CRO · How to choose the right model</p>
-          </a>
-        </div>
+  <p class="muted">
+    Tip: If you’re unsure whether you need drug substance or drug product support, the glossary and decision tree below will help.
+  </p>
+</section>
 
-        <p class="muted">
-          Tip: If you’re unsure whether you need drug substance or drug product support, the glossary and decision tree below will help.
-        </p>
-      </section>
+<section class="card section-pad info-section" id="glossary" aria-label="Glossary">
+  <h2>What is a CDMO, CMO, and CRO?</h2>
+  <p class="muted">
+    Outsourcing terms are often used interchangeably, but they describe different scopes. Here’s a practical breakdown.
+  </p>
 
-      <section class="card section-pad info-section" id="glossary" aria-label="Glossary">
-        <h2>What is a CDMO, CMO, and CRO?</h2>
-        <p class="muted">
-          Outsourcing terms are often used interchangeably, but they describe different scopes. Here’s a practical breakdown.
-        </p>
+  <h3>CDMO (Contract Development and Manufacturing Organization)</h3>
+  <p class="muted">
+    A partner that supports <strong>development and manufacturing</strong>. CDMOs often cover process development, scale-up,
+    tech transfer, validation, and GMP production.
+  </p>
 
-        <h3>CDMO (Contract Development and Manufacturing Organization)</h3>
-        <p class="muted">
-          A partner that supports <strong>development and manufacturing</strong>. CDMOs often cover process development, scale-up,
-          tech transfer, validation, and GMP production.
-        </p>
+  <h3>CMO (Contract Manufacturing Organization)</h3>
+  <p class="muted">
+    A partner focused on <strong>manufacturing execution</strong>. CMOs typically handle routine production, packaging,
+    and supply activities, often after the process is established.
+  </p>
 
-        <h3>CMO (Contract Manufacturing Organization)</h3>
-        <p class="muted">
-          A partner focused on <strong>manufacturing execution</strong>. CMOs typically handle routine production, packaging,
-          and supply activities, often after the process is established.
-        </p>
+  <h3>CRO (Contract Research Organization)</h3>
+  <p class="muted">
+    A partner focused on <strong>research and clinical services</strong>. CROs support analytical work, bioanalysis, clinical
+    trial services, regulatory/medical writing, and other research-driven activities.
+  </p>
 
-        <h3>CRO (Contract Research Organization)</h3>
-        <p class="muted">
-          A partner focused on <strong>research and clinical services</strong>. CROs support analytical work, bioanalysis, clinical
-          trial services, regulatory/medical writing, and other research-driven activities.
-        </p>
+  <h3>CDMO vs CMO vs CRO at a glance</h3>
+  <div class="table-wrap" role="region" aria-label="Outsourcing models comparison table">
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Best for</th>
+          <th>Typical deliverables</th>
+          <th>Questions to ask first</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>CDMO</strong></td>
+          <td>Development + manufacturing</td>
+          <td>Process development, scale-up, tech transfer, validation batches</td>
+          <td>Can you support my stage now and later? What’s your tech transfer approach?</td>
+        </tr>
+        <tr>
+          <td><strong>CMO</strong></td>
+          <td>Manufacturing and supply</td>
+          <td>GMP manufacturing, packaging, supply continuity</td>
+          <td>Do you have capacity for my batch sizes and markets?</td>
+        </tr>
+        <tr>
+          <td><strong>CRO</strong></td>
+          <td>Research and clinical support</td>
+          <td>Analytical/bioanalytical, clinical support, reports</td>
+          <td>Which services are in-house vs outsourced? What is the turnaround time?</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-        <h3>CDMO vs CMO vs CRO at a glance</h3>
-        <div class="table-wrap" role="region" aria-label="Outsourcing models comparison table">
-          <table>
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>Best for</th>
-                <th>Typical deliverables</th>
-                <th>Questions to ask first</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>CDMO</strong></td>
-                <td>Development + manufacturing</td>
-                <td>Process development, scale-up, tech transfer, validation batches</td>
-                <td>Can you support my stage now and later? What’s your tech transfer approach?</td>
-              </tr>
-              <tr>
-                <td><strong>CMO</strong></td>
-                <td>Manufacturing and supply</td>
-                <td>GMP manufacturing, packaging, supply continuity</td>
-                <td>Do you have capacity for my batch sizes and markets?</td>
-              </tr>
-              <tr>
-                <td><strong>CRO</strong></td>
-                <td>Research and clinical support</td>
-                <td>Analytical/bioanalytical, clinical support, reports</td>
-                <td>Which services are in-house vs outsourced? What is the turnaround time?</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+<section class="card section-pad info-section" id="decision-tree" aria-label="Decision tree">
+  <h2>How to choose the right outsourcing model</h2>
+  <p class="muted">
+    Use this quick decision tree to decide where to start. It’s designed for fast routing, not academic perfection.
+  </p>
 
-      <section class="card section-pad info-section" id="decision-tree" aria-label="Decision tree">
-        <h2>How to choose the right outsourcing model</h2>
-        <p class="muted">
-          Use this quick decision tree to decide where to start. It’s designed for fast routing, not academic perfection.
-        </p>
+  <ol class="steps">
+    <li>
+      <div class="n" aria-hidden="true">1</div>
+      <p class="t">
+        <strong>What are you outsourcing?</strong><br />
+        Active ingredient / API / upstream manufacturing → start with
+        <a href="/contract-services/drug-substance-cdmo-cro/">Drug Substance (CDMO/CRO)</a><br />
+        Finished dosage form / fill-finish / packaging → start with
+        <a href="/contract-services/drug-product-cmo/">Drug Product (CMO)</a>
+      </p>
+    </li>
+    <li>
+      <div class="n" aria-hidden="true">2</div>
+      <p class="t">
+        <strong>Do you need development, or only manufacturing?</strong><br />
+        Development + manufacturing → look for a <strong>CDMO</strong><br />
+        Manufacturing only (process already defined) → look for a <strong>CMO</strong>
+      </p>
+    </li>
+    <li>
+      <div class="n" aria-hidden="true">3</div>
+      <p class="t">
+        <strong>Is research or clinical support required?</strong><br />
+        Bioanalysis, clinical services, research-heavy work → involve a <strong>CRO</strong>
+        (or a CDMO with CRO capabilities)
+      </p>
+    </li>
+    <li>
+      <div class="n" aria-hidden="true">4</div>
+      <p class="t">
+        <strong>What stage are you in?</strong><br />
+        Early development / clinical → prioritize flexibility, small batches, fast iteration<br />
+        Commercial → prioritize capacity, quality maturity, supply reliability, documentation readiness
+      </p>
+    </li>
+    <li>
+      <div class="n" aria-hidden="true">5</div>
+      <p class="t">
+        <strong>Any specialized constraints?</strong><br />
+        Sterile manufacturing, high potency/containment, complex biologics → shortlist specialized facilities first
+      </p>
+    </li>
+  </ol>
 
-        <ol class="steps">
-          <li>
-            <div class="n" aria-hidden="true">1</div>
-            <p class="t">
-              <strong>What are you outsourcing?</strong><br />
-              Active ingredient / API / upstream manufacturing → start with
-              <a href="/contract-services/drug-substance-cdmo-cro/">Drug Substance (CDMO/CRO)</a><br />
-              Finished dosage form / fill-finish / packaging → start with
-              <a href="/contract-services/drug-product-cmo/">Drug Product (CMO)</a>
-            </p>
-          </li>
-          <li>
-            <div class="n" aria-hidden="true">2</div>
-            <p class="t">
-              <strong>Do you need development, or only manufacturing?</strong><br />
-              Development + manufacturing → look for a <strong>CDMO</strong><br />
-              Manufacturing only (process already defined) → look for a <strong>CMO</strong>
-            </p>
-          </li>
-          <li>
-            <div class="n" aria-hidden="true">3</div>
-            <p class="t">
-              <strong>Is research or clinical support required?</strong><br />
-              Bioanalysis, clinical services, research-heavy work → involve a <strong>CRO</strong>
-              (or a CDMO with CRO capabilities)
-            </p>
-          </li>
-          <li>
-            <div class="n" aria-hidden="true">4</div>
-            <p class="t">
-              <strong>What stage are you in?</strong><br />
-              Early development / clinical → prioritize flexibility, small batches, fast iteration<br />
-              Commercial → prioritize capacity, quality maturity, supply reliability, documentation readiness
-            </p>
-          </li>
-          <li>
-            <div class="n" aria-hidden="true">5</div>
-            <p class="t">
-              <strong>Any specialized constraints?</strong><br />
-              Sterile manufacturing, high potency/containment, complex biologics → shortlist specialized facilities first
-            </p>
-          </li>
-        </ol>
+  <div class="hero-ctas" aria-label="Decision tree CTAs">
+    <a class="btn btn-primary" href="/contract-services/drug-substance-cdmo-cro/">
+      Browse Drug Substance suppliers
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="btn btn-secondary" href="/contract-services/drug-product-cmo/">
+      Browse Drug Product suppliers
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
 
-        <div class="hero-ctas" aria-label="Decision tree CTAs">
-          <a class="btn btn-primary" href="/contract-services/drug-substance-cdmo-cro/">
-            Browse Drug Substance suppliers
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="btn btn-secondary" href="/contract-services/drug-product-cmo/">
-            Browse Drug Product suppliers
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </section>
+<section class="card section-pad info-section" id="outsourcing-process" aria-label="Outsourcing process">
+  <h2>How outsourcing typically works: from shortlist to supply</h2>
+  <p class="muted">
+    A smooth outsourcing project is mostly about clarity and preparation. The steps below help you move faster and reduce rework.
+  </p>
 
-      <section class="card section-pad info-section" id="outsourcing-process" aria-label="Outsourcing process">
-        <h2>How outsourcing typically works: from shortlist to supply</h2>
-        <p class="muted">
-          A smooth outsourcing project is mostly about clarity and preparation. The steps below help you move faster and reduce rework.
-        </p>
+  <ol class="steps">
+    <li><div class="n" aria-hidden="true">1</div><p class="t"><strong>Define requirements</strong> (product type, stage, target markets, batch sizes, timelines)</p></li>
+    <li><div class="n" aria-hidden="true">2</div><p class="t"><strong>Build a shortlist</strong> (capability fit + region + quality requirements)</p></li>
+    <li><div class="n" aria-hidden="true">3</div><p class="t"><strong>Share a concise project brief</strong> (and sign an NDA if needed)</p></li>
+    <li><div class="n" aria-hidden="true">4</div><p class="t"><strong>Feasibility and proposal</strong> (timeline, costs, risks, required inputs)</p></li>
+    <li><div class="n" aria-hidden="true">5</div><p class="t"><strong>Quality assessment</strong> (documentation review, audit readiness)</p></li>
+    <li><div class="n" aria-hidden="true">6</div><p class="t"><strong>Agreement setup</strong> (quality agreement, responsibilities, change control)</p></li>
+    <li><div class="n" aria-hidden="true">7</div><p class="t"><strong>Tech transfer</strong> (process, analytics, raw materials, packaging components)</p></li>
+    <li><div class="n" aria-hidden="true">8</div><p class="t"><strong>Validation and routine supply</strong> (as required by your stage and markets)</p></li>
+  </ol>
+</section>
 
-        <ol class="steps">
-          <li><div class="n" aria-hidden="true">1</div><p class="t"><strong>Define requirements</strong> (product type, stage, target markets, batch sizes, timelines)</p></li>
-          <li><div class="n" aria-hidden="true">2</div><p class="t"><strong>Build a shortlist</strong> (capability fit + region + quality requirements)</p></li>
-          <li><div class="n" aria-hidden="true">3</div><p class="t"><strong>Share a concise project brief</strong> (and sign an NDA if needed)</p></li>
-          <li><div class="n" aria-hidden="true">4</div><p class="t"><strong>Feasibility and proposal</strong> (timeline, costs, risks, required inputs)</p></li>
-          <li><div class="n" aria-hidden="true">5</div><p class="t"><strong>Quality assessment</strong> (documentation review, audit readiness)</p></li>
-          <li><div class="n" aria-hidden="true">6</div><p class="t"><strong>Agreement setup</strong> (quality agreement, responsibilities, change control)</p></li>
-          <li><div class="n" aria-hidden="true">7</div><p class="t"><strong>Tech transfer</strong> (process, analytics, raw materials, packaging components)</p></li>
-          <li><div class="n" aria-hidden="true">8</div><p class="t"><strong>Validation and routine supply</strong> (as required by your stage and markets)</p></li>
-        </ol>
-      </section>
+<section class="card section-pad info-section" id="supplier-checklist" aria-label="Supplier checklist">
+  <h2>Supplier evaluation checklist</h2>
+  <p class="muted">
+    Providing the right inputs upfront helps suppliers respond faster and more accurately.
+  </p>
 
-      <section class="card section-pad info-section" id="supplier-checklist" aria-label="Supplier checklist">
-        <h2>Supplier evaluation checklist</h2>
-        <p class="muted">
-          Providing the right inputs upfront helps suppliers respond faster and more accurately.
-        </p>
+  <h3>What to prepare before contacting suppliers</h3>
+  <ul class="list muted">
+    <li>Product type (Drug Substance / Drug Product) and dosage form (if applicable)</li>
+    <li>Development stage (preclinical / clinical / commercial)</li>
+    <li>Batch sizes and annual demand estimate</li>
+    <li>Target markets (EU/US/other) and quality expectations (GMP, documentation)</li>
+    <li>Key constraints (sterile, containment/OEB, cold chain, controlled substances)</li>
+    <li>Timeline (tech transfer, first batch, launch window)</li>
+  </ul>
 
-        <h3>What to prepare before contacting suppliers</h3>
-        <ul class="list muted">
-          <li>Product type (Drug Substance / Drug Product) and dosage form (if applicable)</li>
-          <li>Development stage (preclinical / clinical / commercial)</li>
-          <li>Batch sizes and annual demand estimate</li>
-          <li>Target markets (EU/US/other) and quality expectations (GMP, documentation)</li>
-          <li>Key constraints (sterile, containment/OEB, cold chain, controlled substances)</li>
-          <li>Timeline (tech transfer, first batch, launch window)</li>
-        </ul>
+  <h3 class="section-subtitle">Questions to ask a CDMO/CMO during evaluation</h3>
+  <ul class="list muted">
+    <li><strong>Capability &amp; experience:</strong> Have you produced similar products and at similar scales? Which steps are in-house vs outsourced?</li>
+    <li><strong>Quality &amp; compliance:</strong> What certifications/inspections are relevant to my target markets? How do you manage deviations, CAPA, and change control?</li>
+    <li><strong>Capacity &amp; timelines:</strong> What is your current capacity and realistic lead time? What are the main risks to schedule and how do you mitigate them?</li>
+    <li><strong>Communication:</strong> Who owns the project day-to-day and how are updates handled? What does escalation look like if timelines slip?</li>
+  </ul>
+</section>
 
-        <h3 class="section-subtitle">Questions to ask a CDMO/CMO during evaluation</h3>
-        <ul class="list muted">
-          <li><strong>Capability &amp; experience:</strong> Have you produced similar products and at similar scales? Which steps are in-house vs outsourced?</li>
-          <li><strong>Quality &amp; compliance:</strong> What certifications/inspections are relevant to my target markets? How do you manage deviations, CAPA, and change control?</li>
-          <li><strong>Capacity &amp; timelines:</strong> What is your current capacity and realistic lead time? What are the main risks to schedule and how do you mitigate them?</li>
-          <li><strong>Communication:</strong> Who owns the project day-to-day and how are updates handled? What does escalation look like if timelines slip?</li>
-        </ul>
-      </section>
+<section class="card section-pad info-section" id="open-inquiry" aria-label="Open inquiry">
+  <h2>Not sure what you need yet?</h2>
+  <p class="muted">
+    Submit one open inquiry and we’ll route it to relevant suppliers based on your product type, stage, batch size, and quality requirements.
+    You’ll receive responses you can compare to build a shortlist faster.
+  </p>
 
-      <section class="card section-pad info-section" id="open-inquiry" aria-label="Open inquiry">
-        <h2>Not sure what you need yet?</h2>
-        <p class="muted">
-          Submit one open inquiry and we’ll route it to relevant suppliers based on your product type, stage, batch size, and quality requirements.
-          You’ll receive responses you can compare to build a shortlist faster.
-        </p>
+  <div class="hero-ctas">
+    <a class="btn btn-primary" href="/request-quote/">
+      Send an open inquiry
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="btn btn-secondary" href="#glossary">
+      Start with CDMO/CMO/CRO glossary
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
 
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="/request-quote/">
-            Send an open inquiry
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="btn btn-secondary" href="#glossary">
-            Start with CDMO/CMO/CRO glossary
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </section>
+<section class="card section-pad info-section" id="outsourcing-faq" aria-label="Outsourcing FAQ">
+  <h2>Common questions about outsourcing contract services</h2>
 
-      <section class="card section-pad info-section" id="outsourcing-faq" aria-label="Outsourcing FAQ">
-        <h2>Common questions about outsourcing contract services</h2>
+  <div class="faq" aria-label="FAQ list">
+    <details>
+      <summary>When should I choose a CDMO instead of a CMO?</summary>
+      <p>
+        Choose a CDMO when you need development support, tech transfer help, or scaling from early stage to commercial.
+        Choose a CMO when your process is already defined and you primarily need manufacturing capacity.
+      </p>
+    </details>
 
-        <div class="faq" aria-label="FAQ list">
-          <details>
-            <summary>When should I choose a CDMO instead of a CMO?</summary>
-            <p>
-              Choose a CDMO when you need development support, tech transfer help, or scaling from early stage to commercial.
-              Choose a CMO when your process is already defined and you primarily need manufacturing capacity.
-            </p>
-          </details>
+    <details>
+      <summary>Can one partner handle both drug substance and drug product?</summary>
+      <p>
+        Some organizations offer both, but many are specialized. It’s often more efficient to shortlist based on the specific stage
+        and manufacturing scope you need right now.
+      </p>
+    </details>
 
-          <details>
-            <summary>Can one partner handle both drug substance and drug product?</summary>
-            <p>
-              Some organizations offer both, but many are specialized. It’s often more efficient to shortlist based on the specific stage
-              and manufacturing scope you need right now.
-            </p>
-          </details>
-
-          <details>
-            <summary>Do I need GMP for early-stage manufacturing?</summary>
-            <p>
-              Requirements depend on stage and intended use. Many programs start non-GMP and transition later.
-              Align expectations early so you choose a partner that can scale with your regulatory path.
-            </p>
-          </details>
-        </div>
-      </section>
-
-    </div>
+    <details>
+      <summary>Do I need GMP for early-stage manufacturing?</summary>
+      <p>
+        Requirements depend on stage and intended use. Many programs start non-GMP and transition later.
+        Align expectations early so you choose a partner that can scale with your regulatory path.
+      </p>
+    </details>
+  </div>
+</section>
+  </div>
   </main>
 
   <!-- Injected by src/js/includes.js -->
