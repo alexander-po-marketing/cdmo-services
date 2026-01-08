@@ -41,7 +41,8 @@
 
         <div class="hero-band-grid">
           <div class="hero-band-main">
-            <h1>Contract Manufacturing Organizations (CMO/CDMO) Directory</h1>
+            <h1>Contract Manufacturing Organizations</h1>
+            <p class="hero-subheading">(CMO/CDMO) Directory</p>
 
             <p class="hero-subtitle text-limit">
               Find and compare CDMO companies providing pharmaceutical contract manufacturing services across drug substance and drug product.
@@ -51,24 +52,12 @@
             <div class="hero-stats" aria-label="Directory stats">
               <span class="stat-chip"><strong>{{provider_count}}</strong> providers</span>
               <span class="stat-chip">Top regions: <strong>{{top_regions}}</strong></span>
-              <span class="stat-chip">Coverage: <strong>Drug Substance + Drug Product</strong></span>
-            </div>
-
-            <div class="hero-ctas">
-              <a class="btn btn-primary" href="#directory">
-                Browse providers
-                <span class="arrow" aria-hidden="true">→</span>
-              </a>
-              <a class="btn btn-secondary" href="#categories">
-                Explore categories
-                <span class="arrow" aria-hidden="true">→</span>
-              </a>
             </div>
           </div>
 
           <!-- Keep the original “highlights + trust” content, but collapsible to reduce hero height -->
-          <details class="hero-details">
-            <summary>What you can do here</summary>
+          <div class="hero-details">
+            <h2 class="hero-details-title">What you can do here</h2>
             <ul class="bullets" aria-label="Highlights">
               <li><span class="dot" aria-hidden="true"></span><span><strong>Two tracks:</strong> Drug Substance (CDMO/CRO) and Drug Product (CMO)</span></li>
               <li><span class="dot" aria-hidden="true"></span><span><strong>Compare faster:</strong> capabilities, credentials, scale, and regions</span></li>
@@ -78,8 +67,34 @@
             <p class="hero-trust text-limit">
               Supplier profiles include publicly available information and direct submissions; credentials are shown where provided and available.
             </p>
-          </details>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES (kept, moved above directory for quick access) -->
+    <section id="categories" class="container card section-pad info-section">
+      <h2>Explore contract services by category</h2>
+      <p class="muted text-limit">
+        Choose a service area below to browse relevant providers. If you’re not sure where you fit, start with
+        <strong>Drug Substance</strong> or <strong>Drug Product</strong>, then narrow down by expertise and scale.
+      </p>
+
+      <div class="grid" role="list">
+        <a class="tile" href="/contract-services/drug-substance-cdmo-cro/" role="listitem">
+          <p class="title">Drug Substance (CDMO/CRO)</p>
+          <p class="desc">APIs, biologics, peptides, oligonucleotides, intermediates, fine chemicals, cell &amp; gene therapy (DS).</p>
+        </a>
+
+        <a class="tile" href="/contract-services/drug-product-cmo/" role="listitem">
+          <p class="title">Drug Product (CMO)</p>
+          <p class="desc">Dosage forms, sterile injectables, fill-finish formats, and manufacturing execution.</p>
+        </a>
+
+        <a class="tile" href="#directory" role="listitem">
+          <p class="title">Browse all providers</p>
+          <p class="desc">Filter by capability, credentials, region, and scale to build a shortlist.</p>
+        </a>
       </div>
     </section>
 
@@ -121,84 +136,11 @@
           </details>
 
           <details class="filter-group">
-            <summary>Services</summary>
-            <div class="filter-options">
-              <label class="filter-option"><input type="checkbox" /> Development</label>
-              <label class="filter-option"><input type="checkbox" /> Manufacturing</label>
-              <label class="filter-option"><input type="checkbox" /> Analytical/QC</label>
-              <label class="filter-option"><input type="checkbox" /> QA</label>
-              <label class="filter-option"><input type="checkbox" /> Regulatory</label>
-              <label class="filter-option"><input type="checkbox" /> Packaging</label>
-              <label class="filter-option"><input type="checkbox" /> Logistics</label>
-            </div>
-          </details>
-
-          <details class="filter-group">
             <summary>Batch size</summary>
             <div class="filter-options">
               <label class="filter-option"><input type="checkbox" /> Small</label>
               <label class="filter-option"><input type="checkbox" /> Medium</label>
               <label class="filter-option"><input type="checkbox" /> Large</label>
-            </div>
-          </details>
-
-          <details class="filter-group">
-            <summary>Stage</summary>
-            <div class="filter-options">
-              <label class="filter-option"><input type="checkbox" /> Investigational</label>
-              <label class="filter-option"><input type="checkbox" /> Commercial (Phase IV)</label>
-            </div>
-          </details>
-
-          <details class="filter-group">
-            <summary>Use</summary>
-            <div class="filter-options">
-              <label class="filter-option"><input type="checkbox" /> Human</label>
-              <label class="filter-option"><input type="checkbox" /> Veterinary</label>
-            </div>
-          </details>
-
-          <details class="filter-group">
-            <summary>Therapeutic areas (ATC)</summary>
-            <div class="filter-options">
-              <label class="filter-option"><input type="checkbox" /> A (Alimentary tract)</label>
-              <label class="filter-option"><input type="checkbox" /> B (Blood)</label>
-              <label class="filter-option"><input type="checkbox" /> C (Cardiovascular)</label>
-              <label class="filter-option"><input type="checkbox" /> L (Antineoplastic)</label>
-              <label class="filter-option"><input type="checkbox" /> N (Nervous system)</label>
-              <label class="filter-option"><input type="checkbox" /> R (Respiratory)</label>
-              <label class="filter-option"><input type="checkbox" /> V06 (General nutrients)</label>
-              <label class="filter-option"><input type="checkbox" /> V09-10 (Diagnostic agents)</label>
-            </div>
-          </details>
-
-          <details class="filter-group">
-            <summary>OEB</summary>
-            <div class="filter-options">
-              <label class="filter-option"><input type="checkbox" /> OEB 1</label>
-              <label class="filter-option"><input type="checkbox" /> OEB 2</label>
-              <label class="filter-option"><input type="checkbox" /> OEB 3</label>
-              <label class="filter-option"><input type="checkbox" /> OEB 4</label>
-              <label class="filter-option"><input type="checkbox" /> OEB 5</label>
-            </div>
-          </details>
-
-          <details class="filter-group">
-            <summary>BSL</summary>
-            <div class="filter-options">
-              <label class="filter-option"><input type="checkbox" /> BSL 1</label>
-              <label class="filter-option"><input type="checkbox" /> BSL 2</label>
-              <label class="filter-option"><input type="checkbox" /> BSL 3</label>
-              <label class="filter-option"><input type="checkbox" /> BSL 4</label>
-            </div>
-          </details>
-
-          <details class="filter-group">
-            <summary>Controlled substances</summary>
-            <div class="filter-options">
-              <label class="filter-option"><input type="checkbox" /> Lowest potential</label>
-              <label class="filter-option"><input type="checkbox" /> Moderate potential</label>
-              <label class="filter-option"><input type="checkbox" /> High potential</label>
             </div>
           </details>
 
@@ -212,17 +154,6 @@
               <label class="filter-option"><input type="checkbox" /> PMDA</label>
             </div>
           </details>
-
-          <details class="filter-group">
-            <summary>Markets</summary>
-            <div class="filter-options">
-              <label class="filter-option"><input type="checkbox" /> FDA</label>
-              <label class="filter-option"><input type="checkbox" /> EMA</label>
-              <label class="filter-option"><input type="checkbox" /> PMDA</label>
-              <label class="filter-option"><input type="checkbox" /> ANVISA</label>
-              <label class="filter-option"><input type="checkbox" /> Health Canada</label>
-            </div>
-          </details>
         </aside>
 
         <div class="results" aria-live="polite">
@@ -233,14 +164,6 @@
               <div class="results-controls">
                 <div class="results-search">
                   <input type="search" placeholder="Search CDMOs, regions, capabilities…" aria-label="Search providers" />
-                </div>
-                <div class="sort-control">
-                  <label for="sort-order" class="meta-label">Sort by</label>
-                  <select id="sort-order" name="sort-order">
-                    <option>Relevance</option>
-                    <option>Region match</option>
-                    <option>Newest profiles</option>
-                  </select>
                 </div>
               </div>
             </div>
@@ -386,34 +309,8 @@
       </div>
     </section>
 
-    <!-- CATEGORIES (kept, moved below directory so companies are primary) -->
-    <section id="categories" class="container card section-pad">
-      <h2>Explore contract services by category</h2>
-      <p class="muted text-limit">
-        Choose a service area below to browse relevant providers. If you’re not sure where you fit, start with
-        <strong>Drug Substance</strong> or <strong>Drug Product</strong>, then narrow down by expertise and scale.
-      </p>
-
-      <div class="grid" role="list">
-        <a class="tile" href="/contract-services/drug-substance-cdmo-cro/" role="listitem">
-          <p class="title">Drug Substance (CDMO/CRO)</p>
-          <p class="desc">APIs, biologics, peptides, oligonucleotides, intermediates, fine chemicals, cell &amp; gene therapy (DS).</p>
-        </a>
-
-        <a class="tile" href="/contract-services/drug-product-cmo/" role="listitem">
-          <p class="title">Drug Product (CMO)</p>
-          <p class="desc">Dosage forms, sterile injectables, fill-finish formats, and manufacturing execution.</p>
-        </a>
-
-        <a class="tile" href="#directory" role="listitem">
-          <p class="title">Browse all providers</p>
-          <p class="desc">Filter by capability, credentials, region, and scale to build a shortlist.</p>
-        </a>
-      </div>
-    </section>
-
     <!-- HOW TO USE (kept) -->
-    <section id="how-it-works" class="container card section-pad" aria-label="How to use">
+    <section id="how-it-works" class="container card section-pad info-section" aria-label="How to use">
       <h2>How to use this directory (in 60 seconds)</h2>
 
       <ol class="steps">
@@ -446,7 +343,7 @@
     </section>
 
     <!-- OVERVIEW TABLE (kept) -->
-    <section id="services" class="container card section-pad" aria-label="Service coverage overview">
+    <section id="services" class="container card section-pad info-section" aria-label="Service coverage overview">
       <h2>Contract manufacturing services covered on Pharmaoffer</h2>
 
       <div class="table-wrap" role="region" aria-label="Services table">
@@ -475,7 +372,7 @@
     </section>
 
     <!-- GUIDE (kept) -->
-    <section id="guide" class="container card section-pad">
+    <section id="guide" class="container card section-pad info-section">
       <h2>Pharmaceutical contract manufacturing: how to shortlist the right partner</h2>
       <p class="muted text-limit">
         Choosing a contract manufacturing organization is rarely about one factor. The best CDMO services match
@@ -511,7 +408,7 @@
     </section>
 
     <!-- FAQ + Glossary (kept) -->
-    <section id="faq" class="container card section-pad">
+    <section id="faq" class="container card section-pad info-section">
       <h2>Frequently asked questions about CDMO services</h2>
 
       <div class="faq" aria-label="FAQ list">
