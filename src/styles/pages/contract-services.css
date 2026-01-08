@@ -42,6 +42,14 @@
   color: #fff;
 }
 
+.section-title{
+  font-size: 28px;
+}
+
+@media (max-width: 900px){
+  .section-title{ font-size: 22px; }
+}
+
 .hero-band-main .hero-subheading{
   margin: 0 0 8px;
   color: rgba(255,255,255,0.92);
