@@ -1,0 +1,108 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-card {
+  display: grid;
+  gap: 16px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-bullets {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--c-text);
+}
+
+.trust-line {
+  color: var(--c-muted);
+  font-size: 14px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.category-tile {
+  display: grid;
+  gap: 12px;
+}
+
+.steps {
+  display: grid;
+  gap: 16px;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+}
+
+.steps li {
+  list-style: none;
+  background: var(--bg-card);
+  border-radius: var(--radius-desktop);
+  box-shadow: var(--shadow-default);
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.steps li::before {
+  counter-increment: step;
+  content: "Step " counter(step);
+  font-family: var(--font-heading);
+  color: var(--c-secondary);
+}
+
+.directory-panel {
+  display: grid;
+  gap: 20px;
+}
+
+.directory-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.directory-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.glossary {
+  display: grid;
+  gap: 12px;
+}
+
+.glossary div {
+  background: var(--bg-card);
+  border-radius: var(--radius-desktop);
+  box-shadow: var(--shadow-default);
+  padding: 16px 20px;
+}
+
+@media (max-width: 640px) {
+  .steps li,
+  .glossary div {
+    border-radius: var(--radius-mobile);
+  }
+}
