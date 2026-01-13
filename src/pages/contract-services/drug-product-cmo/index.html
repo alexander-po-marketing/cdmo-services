@@ -7,7 +7,7 @@
   <title>Drug Product CMO Services Directory | Pharmaoffer</title>
   <meta
     name="description"
-    content="Browse drug product CMO services to compare Contract Manufacturing Organization partners by dosage form, packaging, and validation, then open an inquiry."
+    content="Browse drug product CMO services for finished dosage form manufacturing and fill-finish. Compare Contract Manufacturing Organizations by dosage form, quality credentials, scale, and region."
   />
 
   <!-- Brand fonts -->
@@ -28,13 +28,14 @@
   <div id="site-header"></div>
 
   <main>
-    <section class="hero-band" aria-label="Drug product hero">
+    <!-- HERO -->
+    <section class="hero-band" aria-label="Drug Product CMO hero">
       <div class="container hero-band-inner">
         <nav class="breadcrumbs breadcrumbs--hero" aria-label="Breadcrumb">
           <ol>
             <li><a href="/">Home</a></li>
             <li><a href="/contract-services/">Contract services</a></li>
-            <li aria-current="page">Drug Product</li>
+            <li aria-current="page">Drug Product (CMO)</li>
           </ol>
         </nav>
 
@@ -43,111 +44,114 @@
             <h1>Drug Product CMO Services</h1>
 
             <p class="hero-subtitle text-limit">
-              Compare Contract Manufacturing Organization partners focused on Drug Product manufacturing, fill-finish, and packaging.
-              This CMO services hub highlights dosage form execution, tech transfer, validation, and supply continuity.
+              Find and compare <strong>CMO services</strong> for <strong>drug product manufacturing</strong>, including oral solids,
+              liquids, semi-solids, sterile injectables, and fill-finish formats. This directory helps you shortlist
+              <strong>Contract Manufacturing Organizations</strong> by dosage form fit, quality credentials, scale, and region.
             </p>
 
             <div class="hero-stats" aria-label="Directory stats">
-              <span class="stat-chip"><strong>{{provider_count}}</strong> Drug Product providers</span>
+              <span class="stat-chip"><strong>{{provider_count}}</strong> providers</span>
               <span class="stat-chip">Top regions: <strong>{{top_regions}}</strong></span>
-              <span class="stat-chip">Common formats: <strong>{{primary_formats}}</strong></span>
-            </div>
-
-            <div class="hero-links" aria-label="Directory navigation">
-              <a class="pill" href="/contract-services/">Back to all providers</a>
+              <span class="stat-chip">Focus: <strong>CMO services</strong> for finished dosage forms</span>
             </div>
           </div>
 
           <details class="hero-details" open>
-            <summary class="hero-details-title">Focused on Drug Product outsourcing</summary>
+            <summary class="hero-details-title">What you can do here</summary>
             <ul class="bullets" aria-label="Highlights">
-              <li><span class="dot" aria-hidden="true"></span><span><strong>Sterile vs non-sterile:</strong> match the right manufacturing suites</span></li>
-              <li><span class="dot" aria-hidden="true"></span><span><strong>Packaging lines:</strong> evaluate containers, closures, and labeling</span></li>
-              <li><span class="dot" aria-hidden="true"></span><span><strong>Tech transfer:</strong> align batch records, validation, and QA timelines</span></li>
-              <li><span class="dot" aria-hidden="true"></span><span><strong>Supply continuity:</strong> confirm capacity and redundancy</span></li>
+              <li><span class="dot" aria-hidden="true"></span><span><strong>Find the right CMO:</strong> match dosage form, packaging lines, and quality maturity</span></li>
+              <li><span class="dot" aria-hidden="true"></span><span><strong>Compare confidently:</strong> credentials, markets, capacity, and timelines</span></li>
+              <li><span class="dot" aria-hidden="true"></span><span><strong>Move faster:</strong> tech transfer and validation readiness included in evaluation</span></li>
+              <li><span class="dot" aria-hidden="true"></span><span><strong>Take action:</strong> request quotes or send an open inquiry</span></li>
             </ul>
             <p class="hero-trust muted">
-              Supplier profiles highlight dosage form experience, facility scale, and quality credentials where available.
+              Supplier profiles include publicly available information and direct submissions; credentials are shown where provided and available.
             </p>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="container card section-pad info-section" aria-label="What is drug product outsourcing">
+    <!-- WHAT IS (NEW: explicit CMO context) -->
+    <section id="what-is" class="container card section-pad info-section" aria-label="What is Drug Product outsourcing">
       <h2 class="section-title">What is Drug Product outsourcing (CMO)?</h2>
       <p class="muted text-limit">
-        Drug Product refers to the finished dosage form that patients receive, including tablets, liquids, injectables, and packaged products.
-        Drug Product outsourcing focuses on fill-finish, packaging, and GMP manufacturing execution.
+        <strong>Drug Product</strong> is the finished dosage form patients use (tablets, capsules, injectables, sprays, creams, etc.).
+        A <strong>Contract Manufacturing Organization (CMO)</strong> focuses on manufacturing execution: tech transfer, GMP production, validation, packaging, and reliable supply.
       </p>
       <p class="muted text-limit">
-        A Contract Manufacturing Organization (CMO) delivers manufacturing, tech transfer, and validation, while a CDMO adds development scope.
-        Choose the model based on whether your process is defined or still requires development.
+        If you still need formulation work, process development, or significant method development, you may need a <strong>CDMO</strong> scope.
+        This page focuses: <strong>CMO services</strong> and partners who can manufacture and supply drug products at the stage you’re in.
       </p>
-      <ul class="list muted">
-        <li><strong>Choose a CMO:</strong> when you need manufacturing execution, validation, and commercial supply.</li>
-        <li><strong>Choose a CDMO:</strong> when development is still required alongside manufacturing.</li>
-        <li><strong>Confirm dosage form fit:</strong> align sterile vs non-sterile suites and packaging lines.</li>
-        <li><strong>Plan supply continuity:</strong> validate capacity and backup options early.</li>
+
+      <ul class="list muted" aria-label="When to choose CMO vs CDMO">
+        <li><strong>Choose a CMO</strong> when your process is defined and you need manufacturing capacity, validation, packaging, and supply continuity.</li>
+        <li><strong>Choose a CDMO</strong> when development is still required (formulation, process development, scale-up work).</li>
+        <li><strong>Start with dosage form fit</strong> (sterile vs non-sterile, device/combination needs, packaging lines).</li>
+        <li><strong>Use this directory</strong> to compare CMOs by credentials, markets, scale, and capabilities.</li>
       </ul>
+
+      <div class="buyer-guide-links" aria-label="Quick links">
+        <a class="pill" href="/contract-services/">Back to all contract services</a>
+        <a class="pill" href="/contract-services/drug-substance-cdmo-cro/">Explore Drug Substance (CDMO/CRO)</a>
+      </div>
     </section>
 
-    <section id="types" class="container card section-pad info-section type-nav" aria-label="Drug product types">
+    <!-- TYPES NAVIGATION -->
+    <section id="types" class="container card section-pad info-section type-nav" aria-label="Drug Product types">
       <h2 class="section-title">Browse CMO services by dosage form</h2>
       <p class="muted text-limit">
-        Route to the Drug Product format you need and compare CMO services with the right equipment, packaging, and validation scope.
+        Select a drug product area below. Each type page will narrow the provider list and highlight the manufacturing requirements that matter for that dosage form.
       </p>
 
       <div class="grid" role="list">
         <a class="tile" href="/contract-services/drug-product-cmo/oral-solid-products/" role="listitem">
           <p class="title">Oral solid products</p>
-          <p class="desc">Tablets, capsules, and solid-dose tech transfer.</p>
+          <p class="desc">Tablets, capsules, powders, granules, and oral solid processing.</p>
         </a>
         <a class="tile" href="/contract-services/drug-product-cmo/liquid-oral-products/" role="listitem">
           <p class="title">Liquid oral products</p>
-          <p class="desc">Solutions, suspensions, and oral liquids.</p>
+          <p class="desc">Solutions, suspensions, and oral liquid manufacturing.</p>
         </a>
         <a class="tile" href="/contract-services/drug-product-cmo/semi-solid-products/" role="listitem">
           <p class="title">Semi-solid products</p>
-          <p class="desc">Creams, gels, and ointments with packaging.</p>
+          <p class="desc">Creams, gels, ointments and topical manufacturing.</p>
         </a>
         <a class="tile" href="/contract-services/drug-product-cmo/ophthalmic-products/" role="listitem">
           <p class="title">Ophthalmic products</p>
-          <p class="desc">Sterile eye drops and specialized packaging.</p>
+          <p class="desc">Sterile eye drops and specialized packaging/controls.</p>
         </a>
         <a class="tile" href="/contract-services/drug-product-cmo/nasal-products/" role="listitem">
           <p class="title">Nasal products</p>
-          <p class="desc">Nasal sprays, pumps, and device fill.</p>
+          <p class="desc">Sprays/drops with device compatibility considerations.</p>
         </a>
         <a class="tile" href="/contract-services/drug-product-cmo/inhalation-products/" role="listitem">
           <p class="title">Inhalation products</p>
-          <p class="desc">MDI, DPI, and device coordination.</p>
+          <p class="desc">MDI/DPI/neb solutions with strict performance requirements.</p>
         </a>
         <a class="tile" href="/contract-services/drug-product-cmo/biologic-products/" role="listitem">
           <p class="title">Biologic products</p>
-          <p class="desc">Protein-based Drug Product manufacturing and filling.</p>
+          <p class="desc">Finished biologic drug product manufacturing and filling.</p>
         </a>
-        <a class="tile" href="/contract-services/drug-product-cmo/cell-gene-therapy/" role="listitem">
+        <a class="tile" href="/contract-services/drug-product-cmo/cell-and-gene-therapy/" role="listitem">
           <p class="title">Cell and gene therapy</p>
-          <p class="desc">Advanced therapy fill-finish and cold chain.</p>
+          <p class="desc">Advanced therapy drug products with specialized controls.</p>
         </a>
         <a class="tile" href="/contract-services/drug-product-cmo/sterile-injectables/" role="listitem">
           <p class="title">Sterile injectables</p>
-          <p class="desc">Vials, syringes, and lyophilization suites.</p>
+          <p class="desc">Vials, prefilled syringes, ampoules, lyophilization, and fill-finish.</p>
         </a>
       </div>
     </section>
 
-    <section id="directory" class="container directory-section" aria-label="Drug product provider directory">
+    <!-- DIRECTORY -->
+    <section id="directory" class="container directory-section" aria-label="Drug Product provider directory">
       <div class="directory-layout">
-        <aside id="filters" class="filters-panel" aria-label="Filter drug product providers">
+        <aside id="filters" class="filters-panel" aria-label="Filter Drug Product providers">
           <div class="filters-header">
             <h2 class="filters-title">Filter</h2>
             <button class="btn btn-secondary filters-clear" type="button">Clear</button>
           </div>
-          <p class="filters-note muted">
-            Focused on Drug Product CMO services with dosage form manufacturing, fill-finish, and packaging capabilities.
-          </p>
 
           <div class="filters-scroll">
             <details class="filter-group" open>
@@ -162,69 +166,89 @@
             </details>
 
             <details class="filter-group" open>
-              <summary>Dosage form</summary>
+              <summary>Dosage form / manufacturing</summary>
               <div class="filter-options">
-                <label><input type="checkbox" /> Oral solid</label>
-                <label><input type="checkbox" /> Liquid oral</label>
-                <label><input type="checkbox" /> Semi-solid</label>
-                <label><input type="checkbox" /> Ophthalmic</label>
-                <label><input type="checkbox" /> Nasal</label>
-                <label><input type="checkbox" /> Inhalation</label>
+                <label><input type="checkbox" /> Oral solids</label>
+                <label><input type="checkbox" /> Oral liquids</label>
+                <label><input type="checkbox" /> Semi-solids</label>
                 <label><input type="checkbox" /> Sterile injectables</label>
+                <label><input type="checkbox" /> Inhalation</label>
+                <label><input type="checkbox" /> Ophthalmic</label>
               </div>
             </details>
 
             <details class="filter-group">
-              <summary>Manufacturing scope</summary>
+              <summary>Fill-finish formats</summary>
               <div class="filter-options">
-                <label><input type="checkbox" /> Fill-finish</label>
-                <label><input type="checkbox" /> Packaging &amp; labeling</label>
-                <label><input type="checkbox" /> Tech transfer</label>
-                <label><input type="checkbox" /> Validation batches</label>
+                <label><input type="checkbox" /> Vials</label>
+                <label><input type="checkbox" /> Prefilled syringes</label>
+                <label><input type="checkbox" /> Ampoules</label>
+                <label><input type="checkbox" /> Lyophilized powders</label>
+                <label><input type="checkbox" /> Prefilled pens</label>
               </div>
             </details>
 
             <details class="filter-group">
-              <summary>Supply readiness</summary>
+              <summary>Stage</summary>
               <div class="filter-options">
-                <label><input type="checkbox" /> Clinical supply</label>
-                <label><input type="checkbox" /> Commercial supply</label>
-                <label><input type="checkbox" /> Cold chain</label>
+                <label><input type="checkbox" /> Investigational</label>
+                <label><input type="checkbox" /> Commercial (Phase IV)</label>
               </div>
             </details>
 
             <details class="filter-group">
               <summary>Certifications</summary>
               <div class="filter-options">
-                <label><input type="checkbox" /> ISO</label>
                 <label><input type="checkbox" /> FDA (cGMP)</label>
                 <label><input type="checkbox" /> EMA (EU GMP)</label>
-                <label><input type="checkbox" /> PMDA/MHLW</label>
-                <label><input type="checkbox" /> MHRA</label>
-                <label><input type="checkbox" /> TGA</label>
+                <label><input type="checkbox" /> ISO</label>
+                <label><input type="checkbox" /> ECOVADIS</label>
+              </div>
+            </details>
+
+            <details class="filter-group">
+              <summary>Markets served</summary>
+              <div class="filter-options">
+                <label><input type="checkbox" /> FDA (USA)</label>
+                <label><input type="checkbox" /> EMA (EU)</label>
+                <label><input type="checkbox" /> PMDA (Japan)</label>
+                <label><input type="checkbox" /> MHRA (UK)</label>
+                <label><input type="checkbox" /> NMPA (China)</label>
+              </div>
+            </details>
+
+            <details class="filter-group">
+              <summary>Services</summary>
+              <div class="filter-options">
+                <label><input type="checkbox" /> Tech transfer</label>
+                <label><input type="checkbox" /> GMP manufacturing</label>
+                <label><input type="checkbox" /> Validation</label>
+                <label><input type="checkbox" /> Packaging</label>
+                <label><input type="checkbox" /> Analytical / QC</label>
               </div>
             </details>
           </div>
         </aside>
 
-        <section class="results-panel" aria-label="Drug product results">
+        <section class="results-panel" aria-label="Drug Product results">
           <div class="results-header">
             <div class="results-heading">
-              <h2 class="results-title section-title">Drug Product CMO services providers</h2>
-              <p class="results-subtitle">Showing <strong>{{provider_count}}</strong> Contract Manufacturing Organization companies</p>
-              <p class="directory-note muted">Compare CMO services for dosage form manufacturing, packaging, and validation timelines.</p>
+              <h2 class="results-title section-title">Drug Product Contract Manufacturing Organizations</h2>
+              <p class="results-subtitle">
+                Showing <strong>{{provider_count}}</strong> active profiles for <strong>CMO services</strong> and drug product manufacturing
+              </p>
 
               <div class="results-controls">
                 <div class="results-search">
-                  <input type="search" placeholder="Search dosage forms, packaging, regions…" aria-label="Search drug product providers" />
+                  <input type="search" placeholder="Search CMOs, regions, dosage forms…" aria-label="Search Drug Product providers" />
                 </div>
               </div>
             </div>
 
-            <aside class="promo-card" aria-label="Drug product inquiry">
-              <h3>Open a Drug Product inquiry</h3>
+            <aside class="promo-card" aria-label="Open inquiry for Drug Product">
+              <h3>Sending an open inquiry</h3>
               <p class="muted">
-                Share your dosage form and packaging needs to get matched with CMO companies that can deliver your Drug Product timelines.
+                Not sure which dosage form or fill-finish format fits? Send one inquiry with your stage, target markets, and packaging needs to get matched with CMOs that can deliver.
               </p>
               <a class="btn btn-secondary" href="#">
                 Start an inquiry
@@ -233,76 +257,39 @@
             </aside>
           </div>
 
-          <div class="results-list" aria-label="Drug product provider cards">
-            <div class="search-result-card" id="dp-cmo-01">
+          <div class="results-list" aria-label="Provider cards">
+            <!-- Example cards (replace with live data) -->
+            <div class="search-result-card">
               <div class="result-top">
-                <div class="company-logo" aria-hidden="true">P</div>
-                <div class="result-main">
-                  <div class="company-badges">
-                    <span class="badge">Italy</span>
-                    <span class="badge">Europe</span>
-                  </div>
-                  <div class="company-title-row">
-                    <h3 class="company-name"><a href="#">Example Drug Product CMO A</a></h3>
-                    <a class="discover-link" href="#">Discover our facility</a>
-                  </div>
-                  <p class="result-description">
-                    Oral solid Contract Manufacturing Organization with granulation, coating, and packaging lines for mid-scale commercial supply.
-                  </p>
+                <div class="company-logo" aria-hidden="true">B</div>
 
-                  <div class="result-meta">
-                    <ul class="meta-list">
-                      <li><strong>Activity:</strong> Oral solid Drug Product</li>
-                      <li><strong>Uses:</strong> Clinical to commercial</li>
-                      <li><strong>Certifications:</strong> EMA (EU GMP)</li>
-                      <li><strong>Services:</strong> Tech transfer, validation, packaging</li>
-                    </ul>
-                    <ul class="meta-list">
-                      <li><strong>Batch size:</strong> Medium, Large</li>
-                      <li><strong>Packaging:</strong> Blister, bottles</li>
-                      <li><strong>Lines:</strong> Dedicated oral solid</li>
-                      <li><strong>Markets:</strong> EMA, MHRA</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="result-cta">
-                  <a class="btn btn-primary" href="#">
-                    Request quote
-                    <span class="arrow" aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="search-result-card" id="dp-cmo-02">
-              <div class="result-top">
-                <div class="company-logo" aria-hidden="true">S</div>
                 <div class="result-main">
                   <div class="company-badges">
                     <span class="badge">USA</span>
                     <span class="badge">North America</span>
                   </div>
+
                   <div class="company-title-row">
-                    <h3 class="company-name"><a href="#">Example Drug Product CMO B</a></h3>
+                    <h3 class="company-name"><a href="#">Example Drug Product CMO</a></h3>
                     <a class="discover-link" href="#">Discover our facility</a>
                   </div>
+
                   <p class="result-description">
-                    Sterile fill-finish partner for vials and prefilled syringes with lyophilization and container closure integrity testing.
+                    Drug product manufacturing partner supporting tech transfer, GMP production, and packaging for oral solid products and sterile injectables.
                   </p>
 
                   <div class="result-meta">
                     <ul class="meta-list">
-                      <li><strong>Activity:</strong> Sterile injectables</li>
-                      <li><strong>Uses:</strong> Commercial</li>
+                      <li><strong>Dosage forms:</strong> Oral solids, Sterile injectables</li>
+                      <li><strong>Stage:</strong> Investigational</li>
                       <li><strong>Certifications:</strong> FDA (cGMP)</li>
-                      <li><strong>Services:</strong> Fill-finish, QC, packaging</li>
+                      <li><strong>Services:</strong> Tech transfer, Validation, Packaging</li>
                     </ul>
                     <ul class="meta-list">
-                      <li><strong>Batch size:</strong> Medium</li>
-                      <li><strong>Packaging:</strong> Vials, prefilled syringes</li>
-                      <li><strong>Lyophilization:</strong> In-house</li>
+                      <li><strong>Fill-finish formats:</strong> Vials, Prefilled syringes</li>
+                      <li><strong>Cold chain:</strong> Supported</li>
                       <li><strong>Markets:</strong> FDA, EMA</li>
+                      <li><strong>Capacity:</strong> Medium, Large</li>
                     </ul>
                   </div>
                 </div>
@@ -326,85 +313,96 @@
       </div>
     </section>
 
-    <section class="container buyer-guide card section-pad info-section" id="buyer-guide" aria-label="Drug product buyer guide">
-      <header class="buyer-guide-header">
-        <h2 class="section-title">Drug Product buyer guide</h2>
-        <p class="muted text-limit">
-          A focused checklist for comparing Drug Product CMO services without the full outsourcing playbook.
-        </p>
-      </header>
+    <!-- SHORT BUYER GUIDE (service-specific) -->
+    <section id="buyer-guide" class="container buyer-guide card section-pad info-section" aria-label="Drug Product buyer guide">
+      <h2 class="section-title">Drug Product buyer guide (CMO)</h2>
+      <p class="muted text-limit">
+        Use this short guide to evaluate <strong>CMO services</strong> for drug product manufacturing without getting buried in generic outsourcing advice.
+      </p>
 
-      <div class="guide-accordion" aria-label="Drug product buyer guide sections">
+      <div class="guide-accordion" aria-label="Drug Product guide sections">
         <details open>
           <summary>How to choose a Drug Product CMO</summary>
           <div class="guide-body">
-            <p class="muted text-limit">
-              Confirm dosage form fit, tech transfer ownership, validation planning, and packaging lines before selecting a CMO partner.
-            </p>
             <ul class="list muted">
-              <li>Does the facility have the exact dosage form equipment you need?</li>
-              <li>Which packaging formats and labeling lines are available?</li>
-              <li>How are validation batches scheduled and documented?</li>
-              <li>What sterile vs non-sterile suites are available for your product?</li>
+              <li><strong>Dosage form fit:</strong> match the exact formats you need (sterile vs non-sterile, device needs, packaging lines).</li>
+              <li><strong>Tech transfer readiness:</strong> who owns transfer, documentation, and change control?</li>
+              <li><strong>Validation and timelines:</strong> realistic lead times and batch release process.</li>
+              <li><strong>Supply continuity:</strong> capacity planning, second-source options, and risk mitigation.</li>
+              <li><strong>Markets:</strong> experience supplying to your target regulators (FDA, EMA, etc.).</li>
             </ul>
           </div>
         </details>
 
         <details>
-          <summary>Key terms and partner types</summary>
+          <summary>Key terms (Drug Product)</summary>
           <div class="guide-body">
             <ul class="list muted">
-              <li><strong>CMO:</strong> manufacturing execution, tech transfer, validation, and supply continuity.</li>
-              <li><strong>CDMO:</strong> adds development services when formulation or process work remains.</li>
-              <li><strong>Fill-finish:</strong> the final sterile or non-sterile fill and closure step.</li>
-              <li><strong>CCI:</strong> container closure integrity testing for sterility assurance.</li>
-              <li><strong>Packaging lines:</strong> equipment and controls for labeling, serialization, and final packs.</li>
+              <li><strong>Fill-finish:</strong> filling drug product into final containers (vials, syringes, pens) under controlled conditions.</li>
+              <li><strong>Aseptic vs terminal sterilization:</strong> different manufacturing paths with different facility and validation needs.</li>
+              <li><strong>CCI (Container Closure Integrity):</strong> tests that confirm packaging integrity for sterile products.</li>
+              <li><strong>Lyophilization:</strong> freeze-drying process requiring specific cycle development and equipment.</li>
+              <li><strong>Tech transfer:</strong> moving a process into the manufacturing line with controlled documentation and QA oversight.</li>
             </ul>
           </div>
         </details>
 
         <details>
-          <summary>Common pitfalls</summary>
+          <summary>Common pitfalls in Drug Product outsourcing</summary>
           <div class="guide-body">
             <ul class="list muted">
-              <li>Capacity constraints can impact launch timing—request visibility into scheduling.</li>
-              <li>Validation timelines are longer than expected—align on batch plans early.</li>
-              <li>Packaging compatibility issues can delay release if not tested up front.</li>
+              <li><strong>Capacity surprises:</strong> the facility can do it, but not when you need it. Validate timelines early.</li>
+              <li><strong>Packaging constraints:</strong> line compatibility and component lead times are often underestimated.</li>
+              <li><strong>Validation gaps:</strong> schedule risk if validation strategy isn’t aligned to stage/markets.</li>
+              <li><strong>Scope confusion:</strong> if development is still needed, you may need CDMO scope, not pure CMO execution.</li>
             </ul>
           </div>
         </details>
       </div>
     </section>
 
-    <section class="container card section-pad info-section" id="faq" aria-label="Drug product FAQ">
+    <!-- FAQ -->
+    <section id="faq" class="container card section-pad info-section" aria-label="Drug Product FAQ">
       <h2 class="section-title">Drug Product FAQ</h2>
-      <ul class="qa-list">
-        <li>
-          <p class="qa-q"><strong>When should I choose a CMO instead of a CDMO?</strong></p>
-          <p class="muted qa-a">
-            Choose CMO services when your process is defined and you need manufacturing execution. Use a CDMO when development is still required.
-          </p>
-        </li>
-        <li>
-          <p class="qa-q"><strong>Is sterile fill-finish always required for injectables?</strong></p>
-          <p class="muted qa-a">
-            Most injectable products require sterile fill-finish. Confirm whether your process uses aseptic or terminal sterilization and select a CMO accordingly.
-          </p>
-        </li>
-        <li>
-          <p class="qa-q"><strong>How early should I align packaging requirements?</strong></p>
-          <p class="muted qa-a">
-            Packaging decisions should be finalized before validation batches so labels, components, and line settings can be qualified together.
-          </p>
-        </li>
-      </ul>
+
+      <div class="guide-accordion" aria-label="Drug Product FAQ items">
+        <details>
+          <summary>When should I choose a CMO instead of a CDMO?</summary>
+          <div class="guide-body">
+            <p class="muted text-limit">
+              Choose a CMO when the process is defined and you primarily need manufacturing execution: tech transfer, validation, packaging, and reliable supply.
+              If formulation/process development is still required, CDMO scope may be a better fit.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What should I include in an initial CMO inquiry?</summary>
+          <div class="guide-body">
+            <p class="muted text-limit">
+              Include dosage form, stage, batch sizes and annual demand estimate, target markets, packaging format, cold chain needs (if applicable),
+              and key quality expectations. Clear inputs lead to faster and more accurate proposals.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I shortlist Contract Manufacturing Organizations quickly?</summary>
+          <div class="guide-body">
+            <p class="muted text-limit">
+              Start with dosage form fit and facility experience, then validate quality credentials and target markets.
+              Use the filters above to narrow down providers before you begin outreach.
+            </p>
+          </div>
+        </details>
+      </div>
     </section>
 
-    <section class="container info-section" aria-label="Internal links">
-      <h2 class="section-title">Keep exploring</h2>
-      <div class="hub-links">
-        <a class="pill" href="/contract-services/">Explore all Contract Services</a>
-        <a class="pill" href="/contract-services/drug-substance-cdmo-cro/">Explore Drug Substance CDMO/CRO services</a>
+    <!-- KEEP EXPLORING -->
+    <section class="container info-section" aria-label="Keep exploring">
+      <div class="shell-row">
+        <a class="pill" href="/contract-services/">All Contract Services</a>
+        <a class="pill" href="/contract-services/drug-substance-cdmo-cro/">Drug Substance (CDMO/CRO)</a>
       </div>
     </section>
   </main>
