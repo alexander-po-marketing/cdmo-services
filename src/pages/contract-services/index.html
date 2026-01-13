@@ -9,6 +9,26 @@
     name="description"
     content="Browse and compare pharmaceutical CDMO services and CMO services. Filter CDMO/CMO companies by capability, quality credentials, scale, and region to shortlist partners and request quotes."
   />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contract services",
+          "item": "/contract-services/"
+        }
+      ]
+    }
+  </script>
 
   <!-- Brand fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +43,7 @@
   <link rel="stylesheet" href="../../styles/pages/contract-services.css" />
 </head>
 
-<body data-partials-base="../../partials/">
+<body data-partials-base="../../partials/" data-site-base="">
   <div id="site-header"></div>
 
   <main>
@@ -323,7 +343,7 @@
         </div>
       </div>
 
-      <p class="muted text-limit" style="margin-top: 12px;">
+      <p class="muted text-limit mt-12">
         If you’re choosing between partners, focus less on labels and more on <strong>scope</strong>: what’s in-house, what they do routinely,
         and what they can support at your stage.
       </p>
