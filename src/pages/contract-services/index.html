@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Contract Manufacturing Organizations (CMO/CDMO) Directory | Pharmaoffer</title>
+  <title>CDMO & CMO Services Directory (Contract Manufacturing) | Pharmaoffer</title>
   <meta
     name="description"
-    content="Browse and compare CDMO/CMO companies offering pharmaceutical contract manufacturing services. Filter by expertise, quality credentials, scale, and region to shortlist partners and request quotes."
+    content="Browse and compare pharmaceutical CDMO services and CMO services. Filter CDMO/CMO companies by capability, quality credentials, scale, and region to shortlist partners and request quotes."
   />
 
   <!-- Brand fonts -->
@@ -27,10 +27,9 @@
   <div id="site-header"></div>
 
   <main>
-    <!-- HERO BAND (compact, current-site style) -->
+    <!-- HERO BAND -->
     <section class="hero-band" aria-label="Contract services hero">
       <div class="container hero-band-inner">
-        <!-- Breadcrumbs -->
         <nav class="breadcrumbs breadcrumbs--hero" aria-label="Breadcrumb">
           <ol>
             <li><a href="/">Home</a></li>
@@ -43,17 +42,30 @@
             <h1>Contract Manufacturing Outsourcing Services</h1>
 
             <p class="hero-subtitle text-limit">
-              Find and compare CDMO companies providing pharmaceutical contract manufacturing services across drug substance and drug product.
-              Use filters to shortlist by capability, quality credentials, production scale, and region. Then contact providers directly to start a sourcing conversation.
+              Browse a directory of <strong>CDMO and CMO companies</strong> offering pharmaceutical outsourcing.
+              Compare <strong>CDMO services</strong> (development + manufacturing) and <strong>CMO services</strong> (manufacturing execution)
+              across <strong>Drug Substance</strong> and <strong>Drug Product</strong>.
+              Use filters to shortlist by capability, quality credentials, scale, and region, then contact providers directly.
             </p>
 
             <div class="hero-stats" aria-label="Directory stats">
               <span class="stat-chip"><strong>{{provider_count}}</strong> providers</span>
               <span class="stat-chip">Top regions: <strong>{{top_regions}}</strong></span>
             </div>
+
+            <!-- Optional: small CTA row (kept compact) -->
+            <div class="hero-ctas" aria-label="Primary actions">
+              <a class="btn btn-primary" href="#directory">
+                Browse providers
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn-secondary" href="#open-inquiry">
+                Send open inquiry
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
 
-          <!-- Collapsible to keep hero compact -->
           <details class="hero-details" open>
             <summary class="hero-details-title">What you can do here</summary>
             <ul class="bullets" aria-label="Highlights">
@@ -70,22 +82,22 @@
       </div>
     </section>
 
-    <!-- CATEGORIES (kept above directory per request) -->
+    <!-- CATEGORIES -->
     <section id="categories" class="container card section-pad info-section">
       <h2 class="section-title">Explore contract services by category</h2>
       <p class="muted text-limit">
-        Choose a service area below to browse relevant providers.
+        Choose a service area below to browse relevant providers and shorten your shortlist faster.
       </p>
 
       <div class="grid" role="list">
         <a class="tile" href="/contract-services/drug-substance-cdmo-cro/" role="listitem">
           <p class="title">Drug Substance (CDMO/CRO)</p>
-          <p class="desc">APIs, biologics, peptides, oligonucleotides, intermediates, fine chemicals, cell &amp; gene therapy (DS).</p>
+          <p class="desc">APIs, biologics, peptides, oligonucleotides, intermediates, fine chemicals, cell &amp; gene therapy.</p>
         </a>
 
         <a class="tile" href="/contract-services/drug-product-cmo/" role="listitem">
           <p class="title">Drug Product (CMO)</p>
-          <p class="desc">Dosage forms, sterile injectables, fill-finish formats, and manufacturing execution.</p>
+          <p class="desc">Dosage forms, sterile injectables, fill-finish formats, packaging, and manufacturing execution.</p>
         </a>
 
         <a class="tile" href="#directory" role="listitem">
@@ -101,7 +113,7 @@
         <aside id="filters" class="filters-panel" aria-label="Filter providers">
           <div class="filters-header">
             <h2 class="filters-title">Filter</h2>
-            <button class="btn btn-secondary filters-clear" type="button">Clear</button>
+            <button class="btn btn-secondary filters-clear" type="button" aria-label="Clear filters">Clear</button>
           </div>
 
           <div class="filters-scroll">
@@ -119,13 +131,13 @@
             <details class="filter-group" open>
               <summary>Category / Product</summary>
               <div class="filter-options">
-                <label><input type="checkbox" /> CHEMICAL-SYNTHETIC</label>
-                <label><input type="checkbox" /> BIOLOGICS</label>
-                <label><input type="checkbox" /> OLIGONUCLEOTIDES</label>
-                <label><input type="checkbox" /> PARTICLE ENGINEERING</label>
-                <label><input type="checkbox" /> FDF / DRUG PRODUCTS</label>
-                <label><input type="checkbox" /> COSMETICS</label>
-                <label><input type="checkbox" /> NUTRACEUTICALS</label>
+                <label><input type="checkbox" /> Chemical-synthetic</label>
+                <label><input type="checkbox" /> Biologics</label>
+                <label><input type="checkbox" /> Oligonucleotides</label>
+                <label><input type="checkbox" /> Particle engineering</label>
+                <label><input type="checkbox" /> Finished dosage forms / Drug products</label>
+                <label><input type="checkbox" /> Cosmetics</label>
+                <label><input type="checkbox" /> Nutraceuticals</label>
               </div>
             </details>
 
@@ -169,20 +181,23 @@
         <section class="results-panel" aria-label="Provider results">
           <div class="results-header">
             <div class="results-heading">
-              <h2 class="results-title section-title">Contract pharmaceutical outsourcing organizations</h2>
-              <p class="results-subtitle">Showing <strong>{{provider_count}}</strong> verified and active profiles</p>
+              <h2 class="results-title section-title">CDMO and CMO companies</h2>
+              <p class="results-subtitle">
+                Showing <strong>{{provider_count}}</strong> verified and active profiles across Drug Substance and Drug Product outsourcing
+              </p>
 
               <div class="results-controls">
                 <div class="results-search">
-                  <input type="search" placeholder="Search CDMOs, regions, capabilities…" aria-label="Search providers" />
+                  <input type="search" placeholder="Search CDMOs/CMOs, regions, capabilities…" aria-label="Search providers" />
                 </div>
               </div>
             </div>
 
-            <aside class="promo-card" aria-label="Special inquiry">
+            <aside class="promo-card" id="open-inquiry" aria-label="Open inquiry">
               <h3>Sending an open inquiry</h3>
               <p class="muted">
-                Send one inquiry and we’ll match you with relevant CDMOs/CMOs for your project.
+                Not sure which supplier category fits? Send one inquiry with your stage, target markets, batch sizes, and key constraints
+                (sterile, containment/OEB, cold chain). We’ll match you with relevant CDMOs/CMOs.
               </p>
               <a class="btn btn-secondary" href="#">
                 Start an inquiry
@@ -243,7 +258,7 @@
                     <span class="badge">North America</span>
                   </div>
                   <div class="company-title-row">
-                    <h3 class="company-name"><a href="#">Example CDMO B</a></h3>
+                    <h3 class="company-name"><a href="#">Example CMO / CDMO B</a></h3>
                     <a class="discover-link" href="#">Discover our facility</a>
                   </div>
                   <p class="result-description">
@@ -285,13 +300,42 @@
       </div>
     </section>
 
-    <!-- BUYER GUIDE (single card with accordions) -->
+    <!-- NEW: QUICK GLOSSARY (VISIBLE, NOT ONLY IN ACCORDION) -->
+    <section class="container card section-pad info-section" id="glossary" aria-label="CDMO CMO CRO glossary">
+      <h2 class="section-title">What is a CDMO, CMO, and CRO?</h2>
+      <p class="muted text-limit">
+        Outsourcing terms are often used interchangeably, but they describe different scopes. This page is a directory for
+        <strong>CDMO services</strong> and <strong>CMO services</strong>, with guidance to help you route correctly.
+      </p>
+
+      <div class="grid" role="list">
+        <div class="tile" role="listitem">
+          <p class="title">CDMO</p>
+          <p class="desc">A partner that supports <strong>development + manufacturing</strong>: process development, scale-up, tech transfer, validation, and GMP production.</p>
+        </div>
+        <div class="tile" role="listitem">
+          <p class="title">CMO</p>
+          <p class="desc">A partner focused on <strong>manufacturing execution</strong>: GMP manufacturing, packaging, and supply continuity once the process is established.</p>
+        </div>
+        <div class="tile" role="listitem">
+          <p class="title">CRO</p>
+          <p class="desc">A partner focused on <strong>research/analytical/clinical support</strong>: bioanalysis, clinical services, reports, and research-heavy services.</p>
+        </div>
+      </div>
+
+      <p class="muted text-limit" style="margin-top: 12px;">
+        If you’re choosing between partners, focus less on labels and more on <strong>scope</strong>: what’s in-house, what they do routinely,
+        and what they can support at your stage.
+      </p>
+    </section>
+
+    <!-- BUYER GUIDE -->
     <section class="container buyer-guide card section-pad info-section" id="buyer-guide" aria-label="Buyer guide">
       <header class="buyer-guide-header">
         <h2 class="section-title">How to choose the right outsourcing model</h2>
         <p class="muted text-limit">
           Browsing suppliers is the easy part. Picking the right outsourcing setup is where projects win or stall.
-          Use the sections below to understand CDMO/CMO/CRO differences, choose the right model, and approach suppliers with clear requirements.
+          Use the sections below to choose the right model and approach suppliers with clear requirements.
         </p>
 
         <div class="buyer-guide-links" aria-label="Quick links">
@@ -301,6 +345,7 @@
         </div>
       </header>
 
+      <!-- Keep existing accordion content (unchanged structure) -->
       <div class="guide-accordion" aria-label="Buyer guide sections">
         <details open>
           <summary>What is a CDMO, CMO, and CRO?</summary>
