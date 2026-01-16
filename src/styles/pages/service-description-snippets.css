@@ -1,0 +1,118 @@
+.cs_container{
+  width: min(var(--max), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.cs_card{
+  background: var(--bg-card);
+  border-radius: var(--radius-desktop);
+  box-shadow: var(--shadow-default);
+}
+
+.cs_section-pad{
+  padding: 28px;
+}
+
+@media (max-width: 640px){
+  .cs_container{ width: min(var(--max), calc(100% - 24px)); }
+  .cs_card{ border-radius: var(--radius-mobile); }
+  .cs_section-pad{ padding: 18px; }
+}
+
+.cs_muted{ color: var(--c-text); }
+
+.cs_text-limit{ max-width: 76ch; }
+
+.cs_pill{
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--g-100);
+  background: var(--bg-card);
+  color: var(--c-text);
+  font-size: 12px;
+}
+
+.cs_pill:hover{
+  text-decoration: none;
+  border-color: var(--c-primary-outline);
+  background: var(--bg-soft);
+  color: var(--c-secondary);
+}
+
+.cs_pill:focus-visible{
+  outline: 2px solid rgba(var(--c-primary-rgb),0.55);
+  outline-offset: 2px;
+}
+
+.cs_info-section{
+  margin-top: 18px;
+}
+
+.cs_section-title{
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+
+@media (max-width: 900px){
+  .cs_section-title{ font-size: 24px; }
+}
+
+.cs_buyer-guide{
+  margin: 18px auto 0;
+}
+
+.cs_buyer-guide-links{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cs_guide-accordion{
+  margin-top: 6px;
+}
+
+.cs_guide-accordion details{
+  border-top: 1px solid var(--g-100);
+  padding: 12px 0;
+}
+
+.cs_guide-accordion details:first-child{
+  border-top: none;
+  padding-top: 6px;
+}
+
+.cs_guide-accordion summary{
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--c-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 16px;
+}
+
+.cs_guide-accordion summary::-webkit-details-marker{ display: none; }
+
+.cs_guide-accordion summary::after{
+  content: "▾";
+  color: var(--c-secondary);
+  transition: transform var(--t-fast) var(--ease);
+  flex: 0 0 auto;
+}
+
+.cs_guide-accordion details[open] summary::after{
+  transform: rotate(180deg);
+}
+
+.cs_guide-body{
+  margin-top: 10px;
+}
+
+.cs_guide-body p,
+.cs_guide-body .cs_text-limit{
+  max-width: 78ch;
+}
