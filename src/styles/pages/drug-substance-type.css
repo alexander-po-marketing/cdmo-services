@@ -1,0 +1,14 @@
+/* =========================================================
+   Drug Substance type pages
+   ========================================================= */
+
+.type-nav .tile.is-active{
+  border: var(--stroke) solid var(--c-secondary);
+  background: var(--bg-soft);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-2px);
+}
+
+.type-nav .tile.is-active .title{
+  color: var(--c-secondary-dark);
+}
